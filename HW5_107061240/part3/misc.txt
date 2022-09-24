@@ -1,0 +1,4 @@
+class C
+Total cycle: 12094
+Timing: 15
+Area: 1140955

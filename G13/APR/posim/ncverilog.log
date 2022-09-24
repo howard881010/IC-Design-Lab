@@ -1,0 +1,268 @@
+ncverilog(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s084: Started on Jan 18, 2022 at 02:55:44 CST
+ncverilog
+	-f post_sim.f
+		test_post_sim.v
+		../icc/post_layout/CHIP_layout.v
+		-v
+		/usr/cadtool/SAED32_EDK/lib/stdcell_hvt/verilog/saed32nm_hvt.v
+		+access+r
+Loading snapshot worklib.test_top:v .................... Done
+*Novas* Loading libsscore_ius111.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+Novas FSDB Dumper for IUS, Release 2012.01, Linux x86_64/64bit, 01/12/2012
+Copyright (C) 1996 - 2012 by SpringSoft, Inc.
+***********************************************************************
+*  WARNING -                                                          *
+*  The simulator version is newer than the FSDB dumper version which  *
+*  may cause abnormal behavior. Please contact SpringSoft support at  *
+*  support@springsoft.com for assistance.                             *
+***********************************************************************
+*Novas* : Create FSDB file 'post_sim.fsdb'
+*Novas* : Begin traversing the scopes, layer (0).
+*Novas* : End of traversing.
+
+ Congratulations! the answer is 7ff0000000000000 
+!
+
+ Congratulations! the answer is fff0000000000000 
+!
+
+ Congratulations! the answer is 7ff0000000000000 
+!
+
+ Congratulations! the answer is 400c000000000000 
+!
+
+ Congratulations! the answer is 4038b33333333333 
+!
+
+ Congratulations! the answer is 412e848200000000 
+!
+
+ Congratulations! the answer is c12e846c00000000 
+!
+
+ Congratulations! the answer is bfe0000000000000 
+!
+
+ Congratulations! the answer is c031cccccccccccd 
+!
+
+ Congratulations! the answer is 3fd36e9dd7ecbb80 
+!
+
+ Congratulations! the answer is c046a66666666666 
+!
+
+ Congratulations! the answer is 40bcf6ee56041893 
+!
+
+ Congratulations! the answer is 40bcf6256abde3fc 
+!
+
+ Congratulations! the answer is 4191ad9958041893 
+!
+
+ Congratulations! the answer is c04ec00000000000 
+!
+
+ Congratulations! the answer is c0cb6594a57a786c 
+!
+
+ Congratulations! the answer is 4121ec16acbfb15b 
+!
+
+ Congratulations! the answer is c0e9096ac8b43958 
+!
+
+ Congratulations! the answer is 4004000000000000 
+!
+
+ Congratulations! the answer is c02a485681ecd4aa 
+!
+
+ Failed! the answer is 3ff000001cbab003, and the golden is 3ff0000000000000
+!
+
+ Failed! the answer is 3feffe7dbea507b6, and the golden is 3fefffb02599c9ca
+!
+
+ Failed! the answer is bfeee8dd7f066d3c, and the golden is bfeee8dd4748bf12
+!
+
+ Failed! the answer is 3febb67b1a3ea74c, and the golden is 3febb67ae875ed0f
+!
+
+ Failed! the answer is 3fe6a09e8efc7530, and the golden is 3fe6a09e6665983e
+!
+
+ Failed! the answer is bfe000001c7ceb8d, and the golden is bfe0000000000000
+!
+
+ Failed! the answer is 3fd0907ddd86016c, and the golden is 3fd0907dc1930695
+!
+
+ Failed! the answer is 3fb64fd6db648515, and the golden is 3fb64fd6b8c28104
+!
+
+ Failed! the answer is bf5c9870390e9dbc, and the golden is bf5c98701025eb24
+!
+
+ Failed! the answer is 3e1a39e25fe2a27a, and the golden is 0000000000000000
+!
+
+ Failed! the answer is 3ff000001cbab003, and the golden is 3ff0000000000000
+!
+
+ Failed! the answer is 3fefe0d3ed64b00b, and the golden is 3fefffb02599c9ca
+!
+
+ Failed! the answer is 3feee8dd7f066d3c, and the golden is 3feee8dd4748bf12
+!
+
+ Failed! the answer is 3febb67b1a3ea74c, and the golden is 3febb67ae875ed0f
+!
+
+ Failed! the answer is 3fe6a09e8f443518, and the golden is 3fe6a09e6665983e
+!
+
+ Failed! the answer is 3fe000001c7ceb8d, and the golden is 3fe0000000000000
+!
+
+ Failed! the answer is 3fd0907ddd86016c, and the golden is 3fd0907dc1930695
+!
+
+ Failed! the answer is 3fb64fd6db648515, and the golden is 3fb64fd6b8c28104
+!
+
+ Failed! the answer is 3f5c9870390e9dbc, and the golden is 3f5c98701025eb24
+!
+
+ Failed! the answer is 3e1a39e25fe2a27a, and the golden is 0000000000000000
+!
+
+ Congratulations! the answer is 4008800000000000 
+!
+
+ Congratulations! the answer is 4048c00000000000 
+!
+
+ Congratulations! the answer is c008000000000000 
+!
+
+ Congratulations! the answer is ffffffffffffffff 
+!
+
+ Congratulations! the answer is 40760a3d70a3d70b 
+!
+
+ Congratulations! the answer is 0000000000000000 
+!
+
+ Congratulations! the answer is fff0000000000000 
+!
+
+ Congratulations! the answer is 7ff0000000000000 
+!
+
+ Congratulations! the answer is 40b30b0000000000 
+!
+
+ Congratulations! the answer is c0477c6c86fc5e09 
+!
+
+ Congratulations! the answer is 4072d00000000000 
+!
+
+ Congratulations! the answer is bf6b37484ad806ce 
+!
+
+ Congratulations! the answer is 3e5597f8c226fdb4 
+!
+
+ Congratulations! the answer is 0000000000000000 
+!
+
+ Congratulations! the answer is ffffffffffffffff 
+!
+
+ Congratulations! the answer is 7ff0000000000000 
+!
+
+ Congratulations! the answer is fff0000000000000 
+!
+
+ Congratulations! the answer is ffffffffffffffff 
+!
+
+ Congratulations! the answer is ffffffffffffffff 
+!
+
+ Congratulations! the answer is ffffffffffffffff 
+!
+
+ Failed! the answer is 3fe6954b3efa9928, and the golden is 3fe6a09e667f3bcc
+!
+
+ Failed! the answer is 3ff6954b3efa9928, and the golden is 3ff6a09e667f3bcc
+!
+
+ Failed! the answer is 4006954b3efa9928, and the golden is 4006a09e667f3bcc
+!
+
+ Failed! the answer is 3fd6954b3efa9928, and the golden is 3fd6a09e667f3bcd
+!
+
+ Failed! the answer is 4011f14f5485f4c8, and the golden is 4011fa4ebe8d9681
+!
+
+ Failed! the answer is 401c7aa68ec90a80, and the golden is 401c88ee9c8e2703
+!
+
+ Failed! the answer is 40380ce6eb967500, and the golden is 403818f66e709904
+!
+
+ Failed! the answer is 3fa21108ff2ee0ee, and the golden is 3fa21a1851ff630d
+!
+
+ Failed! the answer is 40565158889d908e, and the golden is 40565c899d2e2f36
+!
+
+ Failed! the answer is 408bb635d3c52625, and the golden is 408bc41b5f2c470c
+!
+
+ Failed! the answer is 3ff193ec6e10a166, and the golden is 3ff193ea7aad030c
+!
+
+ Failed! the answer is 4018dbc2915e47ad, and the golden is 4018dbc239b0b862
+!
+
+ Failed! the answer is 4025f63744ef2ba8, and the golden is 4025f6382961e84a
+!
+
+ Failed! the answer is bff5cd1f72ddca46, and the golden is bff5cd1e6a5716c6
+!
+
+ Failed! the answer is bfe0e950c65e7369, and the golden is bfe0e9500fafe7b0
+!
+
+ Failed! the answer is 402c0ecf35e3f86d, and the golden is 402c0ecf249fbbb7
+!
+
+ Failed! the answer is 401343d53a797083, and the golden is 401343d4b8bbd881
+!
+
+ Failed! the answer is 4020f2cb01724324, and the golden is 4020f2caa0ca3e59
+!
+
+ Failed! the answer is 401875290ca905fd, and the golden is 401875286b7a752c
+!
+
+ Failed! the answer is 4003e11a37fa81b9, and the golden is 4003e116bcd39e7c
+!
+Simulation complete via $finish(1) at time 110725959 PS + 0
+./test_post_sim.v:78     #10 $finish;
+ncsim> exit
+TOOL:	ncverilog	15.20-s084: Exiting on Jan 18, 2022 at 02:56:54 CST  (total: 00:01:10)

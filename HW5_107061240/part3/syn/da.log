@@ -1,0 +1,1907 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version R-2020.09-SP5 for linux64 - Apr 23, 2021 
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+# set your TOPLEVEL here
+set TOPLEVEL "Convnet_top"
+Convnet_top
+# change your timing constraint here
+set TEST_CYCLE 15
+15
+source -echo -verbose 0_readfile.tcl 
+set TOP_DIR $TOPLEVEL
+Convnet_top
+set RPT_DIR report
+report
+set NET_DIR netlist
+netlist
+sh rm -rf ./$TOP_DIR
+sh rm -rf ./$RPT_DIR
+sh rm -rf ./$NET_DIR
+sh mkdir ./$TOP_DIR
+sh mkdir ./$RPT_DIR
+sh mkdir ./$NET_DIR
+# define a lib path here
+define_design_lib $TOPLEVEL -path ./$TOPLEVEL
+1
+# Read Design File (add your files here)
+set HDL_DIR "../hdl"
+../hdl
+analyze -library $TOPLEVEL -format verilog "$HDL_DIR/Convnet_top.v"
+Running PRESTO HDLC
+Compiling source file ../hdl/Convnet_top.v
+Warning:  ../hdl/Convnet_top.v:61: Parameter keyword used in local parameter declaration. (VER-329)
+Presto compilation completed successfully.
+Loading db file '/usr/cadtool/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db'
+Loading db file '/usr/cadtool/SAED32_EDK/lib/io_std/db_nldm/saed32io_wb_ss0p95v125c_2p25v.db'
+Loading db file '/usr/cadtool/SAED32_EDK/synthesis/cur/libraries/syn/dw_foundation.sldb'
+1
+analyze -library $TOPLEVEL -format verilog "$HDL_DIR/unshuffule.v"
+Running PRESTO HDLC
+Compiling source file ../hdl/unshuffule.v
+Error:  Unable to open file `../hdl/unshuffule.v': No such file or directory. (VER-41)
+*** Presto compilation terminated with 1 errors. ***
+0
+analyze -library $TOPLEVEL -format verilog "$HDL_DIR/write.v"
+Running PRESTO HDLC
+Compiling source file ../hdl/write.v
+Warning:  ../hdl/write.v:34: Parameter keyword used in local parameter declaration. (VER-329)
+Presto compilation completed successfully.
+1
+analyze -library $TOPLEVEL -format verilog "$HDL_DIR/addr.v"
+Running PRESTO HDLC
+Compiling source file ../hdl/addr.v
+Presto compilation completed successfully.
+1
+analyze -library $TOPLEVEL -format verilog "$HDL_DIR/conv.v"
+Running PRESTO HDLC
+Compiling source file ../hdl/conv.v
+Warning:  ../hdl/conv.v:33: Parameter keyword used in local parameter declaration. (VER-329)
+Presto compilation completed successfully.
+1
+analyze -library $TOPLEVEL -format verilog "$HDL_DIR/pool.v"
+Running PRESTO HDLC
+Compiling source file ../hdl/pool.v
+Warning:  ../hdl/pool.v:43: Parameter keyword used in local parameter declaration. (VER-329)
+Presto compilation completed successfully.
+1
+# elaborate your design
+elaborate $TOPLEVEL -architecture verilog -library $TOPLEVEL
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+  Loading link library 'saed32hvt_ss0p95v125c'
+  Loading link library 'saed32io_wb_ss0p95v125c_2p25v'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 221 in file
+	'../hdl/Convnet_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           223            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 270 in file
+	'../hdl/Convnet_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           272            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Convnet_top line 209 in file
+		'../hdl/Convnet_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | Y  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | Y  | N  | N  |
+|      valid_reg      | Flip-flop |   1   |  N  | N  | N  | N  | Y  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Convnet_top)
+Elaborated 1 design.
+Current design is now 'Convnet_top'.
+Information: Building the design 'unshuffle'. (HDL-193)
+Warning: Cannot find the design 'unshuffle' in the library 'WORK'. (LBR-1)
+Information: Building the design 'addr'. (HDL-193)
+
+Statistics for case statements in always block at line 129 in file
+	'../hdl/addr.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           132            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 165 in file
+	'../hdl/addr.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           177            |    auto/auto     |
+|           179            |    auto/auto     |
+|           225            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine addr line 32 in file
+		'../hdl/addr.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    CNT_ADDR_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | Y  | N  | N  |
+|   CNT_ADDR_R_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | Y  | N  | N  |
+|       CNT_reg       | Flip-flop |   7   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    CNT_BIAS_reg     | Flip-flop |   7   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     CNT_WE_reg      | Flip-flop |  10   |  Y  | N  | N  | N  | Y  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (addr)
+Information: Building the design 'conv'. (HDL-193)
+Warning:  ../hdl/conv.v:131: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:163: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:164: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:165: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:166: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:171: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:172: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:173: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:174: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:179: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:180: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:181: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:182: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:187: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:188: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:189: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:190: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:199: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:200: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:201: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:202: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:207: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:208: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:209: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:210: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:215: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:216: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:217: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:218: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:223: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:224: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:225: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:226: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:275: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:276: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:280: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:281: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:292: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:293: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:297: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:298: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:309: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:310: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:314: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:315: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:326: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:327: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:331: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:332: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/conv.v:356: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:365: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:374: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/conv.v:383: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 149 in file
+	'../hdl/conv.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           160            |    auto/user     |
+|           196            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 350 in file
+	'../hdl/conv.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           353            |    auto/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine conv line 68 in file
+		'../hdl/conv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      tmp2_reg       | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|      tmp3_reg       | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     CNT_WE_reg      | Flip-flop |  10   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     weight_reg      | Flip-flop |  288  |  Y  | N  | N  | N  | Y  | N  | N  |
+|      bias_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | Y  | N  | N  |
+|  conv_out_ch2_reg   | Flip-flop |  84   |  Y  | N  | N  | N  | Y  | N  | N  |
+|  conv_out_ch0_reg   | Flip-flop |  84   |  Y  | N  | N  | N  | Y  | N  | N  |
+|  conv_out_ch3_reg   | Flip-flop |  84   |  Y  | N  | N  | N  | Y  | N  | N  |
+|  conv_out_ch1_reg   | Flip-flop |  84   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    accu_out0_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    accu_out1_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    accu_out2_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    accu_out3_reg    | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     q_out0_reg      | Flip-flop |  14   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     q_out1_reg      | Flip-flop |  14   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     q_out2_reg      | Flip-flop |  14   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     q_out3_reg      | Flip-flop |  14   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     q_out01_reg     | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     q_out11_reg     | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     q_out21_reg     | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     q_out31_reg     | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|      tmp0_reg       | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+|      tmp1_reg       | Flip-flop |  21   |  Y  | N  | N  | N  | Y  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (conv)
+Information: Building the design 'write'. (HDL-193)
+
+Statistics for case statements in always block at line 243 in file
+	'../hdl/write.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           249            |    auto/user     |
+|           257            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 266 in file
+	'../hdl/write.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           270            |    auto/auto     |
+|           278            |     no/auto      |
+|           280            |    auto/auto     |
+|           288            |    auto/auto     |
+|           296            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine write line 45 in file
+		'../hdl/write.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    start_CNT_reg    | Flip-flop |   1   |  N  | N  | N  | N  | Y  | N  | N  |
+|    conv_done_reg    | Flip-flop |   1   |  N  | N  | N  | N  | Y  | N  | N  |
+|    CNT_ADDR_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     CNT_No_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | Y  | N  | N  |
+|   CNT_ADDR_R_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    CNT_HALF_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | Y  | N  | N  |
+|  conv_all_done_reg  | Flip-flop |   1   |  N  | N  | N  | N  | Y  | N  | N  |
+|    CNT_DELAY_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | Y  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write line 311 in file
+		'../hdl/write.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   CNT_ADDR_BA_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | Y  | N  | N  |
+|  CNT_ADDR_R_BA_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | Y  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (write)
+Information: Building the design 'conv_pool'. (HDL-193)
+Warning:  ../hdl/pool.v:490: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:491: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:492: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:493: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:523: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:530: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:537: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:544: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:555: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:562: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:569: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:576: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:587: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:594: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:601: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:608: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:619: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:626: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:633: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:640: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../hdl/pool.v:671: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:672: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:676: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:677: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:682: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:683: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:687: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:688: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:693: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:694: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:698: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:699: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:704: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:705: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:709: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:710: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../hdl/pool.v:858: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../hdl/pool.v:861: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 126 in file
+	'../hdl/pool.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           127            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 248 in file
+	'../hdl/pool.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           250            |    auto/user     |
+|           308            |    auto/auto     |
+|           366            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 425 in file
+	'../hdl/pool.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           434            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 515 in file
+	'../hdl/pool.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           518            |    auto/user     |
+|           520            |    auto/auto     |
+|           552            |    auto/auto     |
+|           584            |    auto/auto     |
+|           616            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 657 in file
+	'../hdl/pool.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           667            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 811 in file
+	'../hdl/pool.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           814            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine conv_pool line 78 in file
+		'../hdl/pool.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       tmp_reg       | Flip-flop | 1344  |  Y  | N  | N  | N  | Y  | N  | N  |
+| accuout_ch8_11_reg  | Flip-flop | 1344  |  Y  | N  | N  | N  | Y  | N  | N  |
+|      state_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | Y  | N  | N  |
+|       cnt_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     cnt_no_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     cnt_ch_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | Y  | N  | N  |
+|  cnt_addr_idx_reg   | Flip-flop |   2   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    cnt_conv_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    cnt_conv1_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | Y  | N  | N  |
+|    cnt_table_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | Y  | N  | N  |
+|      bias_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | Y  | N  | N  |
+|     weight_reg      | Flip-flop |  864  |  Y  | N  | N  | N  | Y  | N  | N  |
+|  accuout_ch0_3_reg  | Flip-flop | 1344  |  Y  | N  | N  | N  | Y  | N  | N  |
+|  accuout_ch4_7_reg  | Flip-flop | 1344  |  Y  | N  | N  | N  | Y  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|  conv_pool/669   |   64   |   21    |      6       |
+======================================================
+Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
+Presto compilation completed successfully. (conv_pool)
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+# Solve Multiple Instance
+set uniquify_naming_style "%s_mydesign_%d"
+%s_mydesign_%d
+uniquify
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+# link the design
+current_design $TOPLEVEL
+Current design is 'Convnet_top'.
+{Convnet_top}
+link
+
+  Linking design 'Convnet_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (5 designs)               /home/u107/u107061240/ICLAB/hw5/part3/syn/Convnet_top.db, etc
+  saed32hvt_ss0p95v125c (library) /usr/cadtool/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db
+  saed32io_wb_ss0p95v125c_2p25v (library) /usr/cadtool/SAED32_EDK/lib/io_std/db_nldm/saed32io_wb_ss0p95v125c_2p25v.db
+  dw_foundation.sldb (library) /usr/cadtool/SAED32_EDK/synthesis/cur/libraries/syn/dw_foundation.sldb
+
+Information: Building the design 'unshuffle'. (HDL-193)
+Warning: Cannot find the design 'unshuffle' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'unshuffle' in 'Convnet_top'. (LINK-5)
+0
+0
+source -echo -verbose 1_setting.tcl 
+# Setting Design and I/O Environment
+set_operating_conditions -library saed32hvt_ss0p95v125c ss0p95v125c
+Using operating conditions 'ss0p95v125c' found in library 'saed32hvt_ss0p95v125c'.
+1
+# Setting wireload model
+set auto_wire_load_selection area_reselect
+area_reselect
+set_wire_load_mode enclosed
+1
+set_wire_load_selection_group predcaps
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+# Setting Timing Constraints
+###  ceate your clock here
+create_clock -name clk -period $TEST_CYCLE [get_ports clk]
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+###  set clock constrain
+set_ideal_network [get_ports clk]
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_dont_touch_network [all_clocks]
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+# I/O delay should depend on the real enironment. Here only shows an example of setting
+set_input_delay 1 -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_output_delay [expr $TEST_CYCLE*0.5] -clock clk [all_outputs]
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_fix_hold [get_clocks clk]
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+# Setting DRC Constraint
+# Defensive setting: smallest fanout_load 0.041 and WLM max fanout # 20 => 0.041*20 = 0.82
+# max_transition and max_capacitance are given in the cell library
+set_max_fanout 0.82 $TOPLEVEL
+1
+# Area Constraint
+set_max_area 0
+1
+1
+source -echo -verbose 2_compile.tcl 
+# this cell's verilog will cause ncverilog to hang 
+set_dont_use [format "%s%s" saed32hvt_ss0p95v125c {/SDFFNASRX1*}]
+1
+# before synthesis settings
+set case_analysis_with_logic_constants true
+true
+set_fix_multiple_port_nets -feedthroughs -outputs -constants -buffer_constants
+1
+####check design####
+check_design > ./$RPT_DIR/check_design.log
+check_timing > ./$RPT_DIR/check_timing.log
+set_clock_gating_style -max_fanout 10
+
+Current clock gating style....
+Sequential cell: latch
+Minimum bank bitwidth: 3
+Minimum bank bitwidth for enhanced clock gating: 6
+Maximum fanout: 10
+Setup time for clock gate: 0.000000
+Hold time for clock gate: 0.000000
+Clock gating circuitry (positive edge): and
+Clock gating circuitry (negative edge): or
+ Note: inverter between clock gating circuitry 
+       and (negative edge) register clock pin.
+Control point insertion: none
+Control signal for control point: scan_enable
+Observation point insertion: false
+Observation logic depth: 5
+1
+# Synthesis all design (using : compile_ultra)
+# you can add "-gate_clock" to do gated-clock
+# you can add "-incremental" for higher performance
+compile_ultra -gate_clock -exact_map -no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | R-2020.09-DWBB_202009.5 |     *     |
+| Licensed DW Building Blocks        | G-2012.06-DWBB_201206.4 |     *     |
+============================================================================
+
+
+Information: There are 164 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'Convnet_top'
+
+  Loading target library 'saed32io_wb_ss0p95v125c_2p25v'
+Information: Building the design 'unshuffle'. (HDL-193)
+Warning: Cannot find the design 'unshuffle' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'unshuffle' in 'Convnet_top'. (LINK-5)
+Loaded alib file './alib-52/saed32hvt_ss0p95v125c.db.alib'
+Loaded alib file './alib-52/saed32io_wb_ss0p95v125c_2p25v.db.alib' (placeholder)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'conv_pool'
+Information: Added key list 'DesignWare' to design 'conv_pool'. (DDB-72)
+ Implement Synthetic for 'conv_pool'.
+  Processing 'conv'
+ Implement Synthetic for 'conv'.
+Information: Added key list 'DesignWare' to design 'conv'. (DDB-72)
+Information: The register 'accu_out3_reg[0]' will be removed. (OPT-1207)
+Information: The register 'accu_out3_reg[1]' will be removed. (OPT-1207)
+Information: The register 'accu_out3_reg[2]' will be removed. (OPT-1207)
+Information: The register 'accu_out3_reg[3]' will be removed. (OPT-1207)
+Information: The register 'accu_out3_reg[4]' will be removed. (OPT-1207)
+Information: The register 'accu_out3_reg[5]' will be removed. (OPT-1207)
+Information: The register 'accu_out2_reg[0]' will be removed. (OPT-1207)
+Information: The register 'accu_out2_reg[1]' will be removed. (OPT-1207)
+Information: The register 'accu_out2_reg[2]' will be removed. (OPT-1207)
+Information: The register 'accu_out2_reg[3]' will be removed. (OPT-1207)
+Information: The register 'accu_out2_reg[4]' will be removed. (OPT-1207)
+Information: The register 'accu_out2_reg[5]' will be removed. (OPT-1207)
+Information: The register 'accu_out1_reg[0]' will be removed. (OPT-1207)
+Information: The register 'accu_out1_reg[1]' will be removed. (OPT-1207)
+Information: The register 'accu_out1_reg[2]' will be removed. (OPT-1207)
+Information: The register 'accu_out1_reg[3]' will be removed. (OPT-1207)
+Information: The register 'accu_out1_reg[4]' will be removed. (OPT-1207)
+Information: The register 'accu_out1_reg[5]' will be removed. (OPT-1207)
+Information: The register 'accu_out0_reg[0]' will be removed. (OPT-1207)
+Information: The register 'accu_out0_reg[1]' will be removed. (OPT-1207)
+Information: The register 'accu_out0_reg[2]' will be removed. (OPT-1207)
+Information: The register 'accu_out0_reg[3]' will be removed. (OPT-1207)
+Information: The register 'accu_out0_reg[4]' will be removed. (OPT-1207)
+Information: The register 'accu_out0_reg[5]' will be removed. (OPT-1207)
+  Processing 'Convnet_top'
+  Processing 'addr'
+Information: Added key list 'DesignWare' to design 'addr'. (DDB-72)
+ Implement Synthetic for 'addr'.
+  Processing 'write'
+Information: Added key list 'DesignWare' to design 'write'. (DDB-72)
+ Implement Synthetic for 'write'.
+  Processing 'SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_0'
+Warning: No negative phase latch in library for Cell latch. The clock phase would be changed. (OPT-1231)
+  Processing 'SNPS_CLOCK_GATE_HIGH_write_mydesign_0'
+Warning: No negative phase latch in library for Cell latch. The clock phase would be changed. (OPT-1231)
+  Processing 'SNPS_CLOCK_GATE_HIGH_conv_mydesign_0'
+Warning: No negative phase latch in library for Cell latch. The clock phase would be changed. (OPT-1231)
+  Processing 'SNPS_CLOCK_GATE_HIGH_addr_mydesign_0'
+Warning: No negative phase latch in library for Cell latch. The clock phase would be changed. (OPT-1231)
+Information: Building the design 'unshuffle'. (HDL-193)
+Warning: Cannot find the design 'unshuffle' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'unshuffle' in 'Convnet_top'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'PMT3_HVT' in the library 'saed32hvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_HVT' in the library 'saed32hvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_HVT' in the library 'saed32hvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_HVT' in the library 'saed32hvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_HVT' in the library 'saed32hvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_HVT' in the library 'saed32hvt_ss0p95v125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_addr_mydesign_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design addr_DW01_inc_J4_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design addr_DW01_inc_J4_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design addr_DW01_inc_J4_4, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_643J2_143_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_642J2_142_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_641J2_141_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_640J2_140_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_639J2_139_2774_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_638J2_138_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_637J2_137_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_636J2_136_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_635J2_135_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_634J2_134_2774_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_633J2_133_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_632J2_132_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_631J2_131_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_630J2_130_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_629J2_129_2774_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_628J2_128_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_627J2_127_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_626J2_126_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_625J2_125_5655_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DP_OP_624J2_124_2774_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DW01_add_J2_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DW01_add_J2_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DW01_add_J2_5, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DW01_add_J2_7, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_DW01_inc_J2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_write_mydesign_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design write_RSOP_116, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design write_DW01_inc_J4_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design write_DW01_inc_J4_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_RSOP_14877, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14961J1_207_8103_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14960J1_206_8103_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14959J1_205_8103_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14958J1_204_8103_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14957J1_203_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14956J1_202_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14955J1_201_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14954J1_200_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14953J1_199_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14952J1_198_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14951J1_197_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14950J1_196_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14949J1_195_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14948J1_194_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14947J1_193_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14946J1_192_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14945J1_191_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14944J1_190_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14943J1_189_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14942J1_188_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14941J1_187_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14940J1_186_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14939J1_185_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14938J1_184_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14937J1_183_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14936J1_182_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14935J1_181_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14934J1_180_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14933J1_179_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14932J1_178_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14931J1_177_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14930J1_176_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14929J1_175_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14928J1_174_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14927J1_173_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14926J1_172_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14925J1_171_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14924J1_170_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14923J1_169_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14922J1_168_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14921J1_167_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14920J1_166_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14919J1_165_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14918J1_164_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14917J1_163_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14916J1_162_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14915J1_161_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14914J1_160_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14913J1_159_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14912J1_158_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14911J1_157_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14910J1_156_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14909J1_155_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14908J1_154_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14907J1_153_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14906J1_152_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14905J1_151_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14904J1_150_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14903J1_149_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14902J1_148_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14901J1_147_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14900J1_146_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14899J1_145_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14898J1_144_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14897J1_143_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14896J1_142_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14895J1_141_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14894J1_140_6466_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14893J1_139_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14892J1_138_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14891J1_137_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14890J1_136_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14889J1_135_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14888J1_134_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14887J1_133_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14886J1_132_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14885J1_131_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14884J1_130_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14883J1_129_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14882J1_128_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14881J1_127_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14880J1_126_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14879J1_125_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14878J1_124_9920_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DW_mult_uns_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DW01_inc_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DW01_inc_J1_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DW01_inc_J1_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DW01_inc_J1_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design write_DP_OP_123J4_124_5106_J4_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design conv_pool_DP_OP_14884J1_208_7733_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_4, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_5, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_6, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_7, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_8, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_9, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_10, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_11, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_12, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_13, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_14, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_15, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_16, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_17, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_18, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_19, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_20, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_21, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_22, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_23, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_24, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_25, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_26, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_27, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_28, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_29, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_30, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_31, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_32, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_33, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_34, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_35, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_36, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_37, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_38, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_39, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_40, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_41, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_42, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_43, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_44, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_45, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_46, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_47, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_48, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_49, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_50, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_51, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_52, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_53, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_54, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_55, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_56, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_57, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_58, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_59, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_60, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_61, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_62, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_63, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_64, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_65, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_66, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_67, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_68, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_69, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_70, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_71, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_72, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_73, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_74, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_75, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_76, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_77, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_78, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_79, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_80, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_81, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_82, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_83, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_84, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_85, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_86, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_87, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_88, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_89, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_90, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_91, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_92, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_93, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_94, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_95, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_96, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_97, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_98, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_99, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_100, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_101, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_102, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_103, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_104, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_105, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_106, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_107, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_108, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_109, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_110, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_111, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_112, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_113, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_114, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_115, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_116, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_117, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_118, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_119, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_120, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_121, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_122, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_123, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_124, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_125, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_126, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_127, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_128, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_129, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_130, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_131, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_132, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_133, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_134, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_135, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_136, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_137, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_138, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_139, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_140, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_141, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_142, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_143, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_144, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_145, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_146, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_147, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_148, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_149, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_150, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_151, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_152, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_153, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_154, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_155, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_156, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_157, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_158, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_159, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_160, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_161, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_162, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_163, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_164, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_165, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_166, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_167, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_168, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_169, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_170, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_171, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_172, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_173, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_174, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_175, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_176, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_177, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_178, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_179, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_180, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_181, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_182, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_183, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_184, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_185, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_186, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_187, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_188, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_189, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_190, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_191, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_192, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_193, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_194, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_195, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_196, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_197, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_198, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_199, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_200, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_201, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_202, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_203, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_204, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_205, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_206, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_207, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_208, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_209, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_210, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_211, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_212, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_213, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_214, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_215, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_216, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_217, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_218, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_219, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_220, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_221, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_222, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_223, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_224, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_225, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_226, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_227, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_228, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_229, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_230, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_231, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_232, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_233, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_234, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_235, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_236, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_237, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_238, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_239, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_240, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_241, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_242, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_243, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_244, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_245, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_246, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_247, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_248, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_249, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_250, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_251, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_252, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_253, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_254, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_255, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_256, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_257, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_258, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_259, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_260, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_261, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_262, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_263, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_264, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_265, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_266, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_267, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_268, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_269, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_270, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_271, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_272, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_273, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_274, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_275, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_276, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_277, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_278, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_279, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_280, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_281, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_282, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_283, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_284, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_285, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_286, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_287, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_288, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_289, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_290, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_291, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_292, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_293, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_294, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_295, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_296, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_297, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_298, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_299, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_300, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_301, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_302, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_303, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_304, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_305, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_306, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_307, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_308, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_309, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_310, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_311, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_312, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_313, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_314, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_315, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_316, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_317, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_318, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_319, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_320, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_321, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_322, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_323, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_324, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_325, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_326, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_327, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_328, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_329, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_330, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_331, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_332, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_333, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_334, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_335, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_336, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_337, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_338, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_339, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_340, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_341, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_342, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_343, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_344, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_345, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_346, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_347, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_348, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_349, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_350, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_351, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_352, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_353, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_354, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_355, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_356, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_357, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_358, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_359, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_360, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_361, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_362, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_363, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_364, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_365, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_366, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_367, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_368, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_369, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_370, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_371, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_372, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_373, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_374, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_375, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_376, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_377, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_378, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_379, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_380, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_381, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_382, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_383, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_384, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_385, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_386, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_387, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_388, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_389, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_390, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_391, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_392, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_393, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_394, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_395, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_396, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_397, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_398, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_399, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_400, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_401, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_402, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_403, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_404, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_405, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_406, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_407, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_408, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_409, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_410, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_411, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_412, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_413, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_414, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_415, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_416, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_417, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_418, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_419, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_420, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_421, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_422, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_423, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_424, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_425, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_426, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_427, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_428, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_429, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_430, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_431, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_432, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_433, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_434, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_435, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_436, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_437, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_438, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_439, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_440, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_441, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_442, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_443, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_444, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_445, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_446, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_447, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_448, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_449, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_450, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_451, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_452, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_453, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_454, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_455, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_456, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_457, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_458, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_459, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_460, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_461, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_462, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_463, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_464, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_465, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_466, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_467, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_468, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_469, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_470, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_471, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_472, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_473, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_474, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_475, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_476, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_477, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_478, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_479, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_480, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_481, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_482, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_483, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_484, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_485, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_486, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_487, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_488, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_489, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_490, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_491, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_492, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_493, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_494, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_495, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_496, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_497, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_498, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_499, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_500, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_501, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_502, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_503, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_504, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_505, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_506, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_507, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_508, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_509, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_510, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_511, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_512, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_513, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_514, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_515, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_516, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_517, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_518, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_519, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_520, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_521, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_522, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_523, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_524, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_525, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_526, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_527, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_528, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_529, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_530, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_531, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_532, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_533, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_534, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_535, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_536, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_537, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_538, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_539, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_540, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_541, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_542, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_543, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_544, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_545, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_546, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_547, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_548, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_549, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_550, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_551, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_552, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_553, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_554, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_555, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_556, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_557, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_558, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_559, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_560, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_561, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_562, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_563, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_564, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_565, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_566, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_567, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_568, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_569, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_570, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_571, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_572, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_573, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_574, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_575, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_576, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_577, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_578, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_579, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_580, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_581, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_582, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_583, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_584, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_585, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_586, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_587, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_588, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_589, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_590, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_591, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_592, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_593, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_594, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_595, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_596, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_597, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_598, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_599, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_600, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_601, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_602, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_603, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_604, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_605, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_606, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_607, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_608, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_609, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_610, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_611, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_612, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_613, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_614, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_615, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_616, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_617, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_618, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_619, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_620, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_621, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_622, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_623, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_624, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_625, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_626, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_627, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_628, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_629, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_630, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_631, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_632, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_633, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_634, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_635, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_636, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_637, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_638, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_639, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_640, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_641, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_642, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_643, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_644, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_645, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_646, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_647, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_648, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_649, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_650, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_651, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_652, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_653, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_654, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_655, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_656, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_657, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_658, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_659, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_660, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_661, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_662, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_663, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_664, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_665, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_666, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_667, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_668, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_669, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_670, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_671, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_672, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_673, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_674, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_675, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_676, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_677, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_678, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_679, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_680, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_681, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_682, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_683, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_684, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_685, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_686, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_687, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_688, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_689, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_690, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_691, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_692, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_693, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_694, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_695, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_696, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_write_mydesign_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_write_mydesign_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_4, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_5, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_6, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_7, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_8, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_9, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_10, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_11, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_12, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_13, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_14, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_15, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_16, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_17, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_18, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_19, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_20, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_21, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_22, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_23, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_24, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_25, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_26, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_27, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_28, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_29, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_30, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_31, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_mydesign_32, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_addr_mydesign_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_addr_mydesign_2, since there are no registers. (PWR-806)
+Information: Performing clock-gating on design conv. (PWR-730)
+Information: Performing clock-gating on design write. (PWR-730)
+Information: Performing clock-gating on design conv_pool. (PWR-730)
+Information: Performing clock-gating on design addr. (PWR-730)
+Information: Performing clock-gating on design Convnet_top. (PWR-730)
+Information: Building the design 'unshuffle'. (HDL-193)
+Warning: Cannot find the design 'unshuffle' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'unshuffle' in 'Convnet_top'. (LINK-5)
+Information: In design 'Convnet_top', the register 'U2/q_out01_reg[14]' is removed because it is merged to 'U2/q_out01_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out01_reg[15]' is removed because it is merged to 'U2/q_out01_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out01_reg[16]' is removed because it is merged to 'U2/q_out01_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out01_reg[17]' is removed because it is merged to 'U2/q_out01_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out01_reg[18]' is removed because it is merged to 'U2/q_out01_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out01_reg[19]' is removed because it is merged to 'U2/q_out01_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out01_reg[20]' is removed because it is merged to 'U2/q_out01_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out11_reg[14]' is removed because it is merged to 'U2/q_out11_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out11_reg[15]' is removed because it is merged to 'U2/q_out11_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out11_reg[16]' is removed because it is merged to 'U2/q_out11_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out11_reg[17]' is removed because it is merged to 'U2/q_out11_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out11_reg[18]' is removed because it is merged to 'U2/q_out11_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out11_reg[19]' is removed because it is merged to 'U2/q_out11_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out11_reg[20]' is removed because it is merged to 'U2/q_out11_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out21_reg[14]' is removed because it is merged to 'U2/q_out21_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out21_reg[15]' is removed because it is merged to 'U2/q_out21_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out21_reg[16]' is removed because it is merged to 'U2/q_out21_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out21_reg[17]' is removed because it is merged to 'U2/q_out21_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out21_reg[18]' is removed because it is merged to 'U2/q_out21_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out21_reg[19]' is removed because it is merged to 'U2/q_out21_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out21_reg[20]' is removed because it is merged to 'U2/q_out21_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out31_reg[14]' is removed because it is merged to 'U2/q_out31_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out31_reg[15]' is removed because it is merged to 'U2/q_out31_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out31_reg[16]' is removed because it is merged to 'U2/q_out31_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out31_reg[17]' is removed because it is merged to 'U2/q_out31_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out31_reg[18]' is removed because it is merged to 'U2/q_out31_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out31_reg[19]' is removed because it is merged to 'U2/q_out31_reg[13]'. (OPT-1215)
+Information: In design 'Convnet_top', the register 'U2/q_out31_reg[20]' is removed because it is merged to 'U2/q_out31_reg[13]'. (OPT-1215)
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%, saed32cell_svt 0.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'write_RSOP_116'. (DDB-72)
+Information: The register 'U1/CNT_BIAS_reg[6]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp1_reg[0]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp1_reg[1]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp1_reg[2]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp1_reg[3]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp1_reg[4]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp1_reg[5]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp0_reg[0]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp0_reg[1]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp0_reg[2]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp0_reg[3]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp0_reg[4]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp0_reg[5]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp3_reg[0]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp3_reg[1]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp3_reg[2]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp3_reg[3]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp3_reg[4]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp3_reg[5]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp2_reg[0]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp2_reg[1]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp2_reg[2]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp2_reg[3]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp2_reg[4]' will be removed. (OPT-1207)
+Information: The register 'U2/tmp2_reg[5]' will be removed. (OPT-1207)
+Information: The register 'U2/CNT_WE_reg[2]' will be removed. (OPT-1207)
+Information: The register 'U2/CNT_WE_reg[3]' will be removed. (OPT-1207)
+Information: The register 'U2/CNT_WE_reg[4]' will be removed. (OPT-1207)
+Information: The register 'U2/CNT_WE_reg[5]' will be removed. (OPT-1207)
+Information: The register 'U2/CNT_WE_reg[6]' will be removed. (OPT-1207)
+Information: The register 'U2/CNT_WE_reg[7]' will be removed. (OPT-1207)
+Information: The register 'U2/CNT_WE_reg[8]' will be removed. (OPT-1207)
+Information: The register 'U2/CNT_WE_reg[9]' will be removed. (OPT-1207)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:10:33  566719.0      0.79     133.2  255929.0                           11887956992.0000      0.00  
+    0:10:53  566218.3      0.92     155.3  258866.4                           11879017472.0000      0.00  
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%, saed32cell_svt 0.00%
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%, saed32cell_svt 0.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%, saed32cell_svt 0.00%
+
+  Beginning Isolate Ports
+  -----------------------
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%, saed32cell_svt 0.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:14:06  536882.2      1.39     225.6  179373.5                           8105233920.0000      0.00  
+  Mapping 'conv_pool_DP_OP_14902J1_148_6466_1'
+  Mapping 'conv_pool_DP_OP_14959J1_205_8103_1'
+  Mapping 'conv_pool_DP_OP_14923J1_169_6466_1'
+  Mapping 'conv_pool_DP_OP_14961J1_207_8103_1'
+  Mapping 'conv_pool_DP_OP_14921J1_167_6466_1'
+  Mapping 'conv_pool_DP_OP_14919J1_165_6466_1'
+  Mapping 'conv_pool_DP_OP_14960J1_206_8103_1'
+  Mapping 'conv_pool_DP_OP_14925J1_171_6466_1'
+  Mapping 'conv_pool_DP_OP_14958J1_204_8103_1'
+    0:14:22  538176.6      0.00       0.0  179356.7                           8132462080.0000      0.00  
+    0:14:22  538176.6      0.00       0.0  179356.7                           8132462080.0000      0.00  
+    0:14:22  538176.6      0.00       0.0  179356.7                           8132462080.0000      0.00  
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%, saed32cell_svt 0.00%
+    0:17:45  538067.1      0.00       0.0  178776.8                           8130587648.0000      0.00  
+    0:18:25  522442.5      0.00       0.0  284780.6                           7921764864.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:22:31  524171.7      0.00       0.0  286522.7                           7961693696.0000      0.00  
+    0:22:41  522396.3      0.00       0.0  288070.0                           7906106880.0000      0.00  
+    0:22:52  520960.1      0.00       0.0  287793.5                           7875950080.0000      0.00  
+    0:23:06  519134.1      0.00       0.0  287785.7                           7839318528.0000      0.00  
+    0:23:19  517292.8      0.00       0.0  287897.7                           7802380800.0000      0.00  
+    0:23:46  515501.1      0.00       0.0  289579.4                           7765261824.0000      0.00  
+    0:24:24  514274.6      0.00       0.0  297838.3                           7740042752.0000      0.00  
+    0:24:31  513988.7      0.00       0.0  299642.9                           7734315520.0000      0.00  
+    0:24:31  513988.7      0.00       0.0  299642.9                           7734315520.0000      0.00  
+    0:24:31  513988.7      0.00       0.0  299642.9                           7734315520.0000      0.00  
+    0:25:09  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:25:10  513853.2      0.00       0.0  299286.6                           7659640320.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:28:33  524758.3      0.00       0.0   70795.2 U4/net601448              8138245120.0000      0.00  
+    0:28:56  525845.5      0.00       0.0   49183.7 U2/weight[1][4][1]        8211756544.0000      0.00  
+    0:29:09  526200.3      0.00       0.0   43325.2 U4/net458525              8223299072.0000      0.00  
+    0:29:17  526258.3      0.00       0.0   43114.6 U4/net601612              8234635264.0000      0.00  
+    0:29:23  526580.3      0.00       0.0   36882.2 U2/net423059              8242298368.0000      0.00  
+    0:29:31  526927.9      0.00       0.0   33547.6 U4/net458520              8253921280.0000      0.00  
+    0:29:38  526964.8      0.00       0.0   33484.3                           8260559872.0000      0.00  
+    0:29:38  526964.8      0.00       0.0   33484.3                           8260559872.0000      0.00  
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%, saed32cell_svt 0.00%
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:29:38  526964.8      0.00       0.0   33484.3                           8260559872.0000      0.00  
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+  Global Optimization (Phase 51)
+  Global Optimization (Phase 52)
+  Global Optimization (Phase 53)
+  Global Optimization (Phase 54)
+  Global Optimization (Phase 55)
+    0:31:46  523814.2      0.00       0.0   24859.8                           8041165312.0000      0.00  
+    0:31:46  523814.2      0.00       0.0   24859.8                           8041165312.0000      0.00  
+    0:31:46  523814.2      0.00       0.0   24859.8                           8041165312.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:14  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+    0:32:15  523368.1      0.00       0.0   25346.6                           7987551232.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:32:39  523380.8      0.00       0.0   25346.6                           7987688960.0000      0.00  
+    0:33:05  523290.9      0.00       0.0   25322.0                           7987863552.0000      0.00  
+    0:33:07  523290.9      0.00       0.0   25322.0                           7987863552.0000      0.00  
+    0:33:07  523290.9      0.00       0.0   25322.0                           7987863552.0000      0.00  
+    0:33:26  523289.6      0.00       0.0   25322.0                           7987727360.0000      0.00  
+    0:33:35  523277.4      0.00       0.0   25322.4                           7987484160.0000      0.00  
+    0:34:12  523262.9      0.00       0.0   25304.9                           7987197440.0000      0.00  
+    0:34:56  523261.6      0.00       0.0   25295.1                           7987184128.0000      0.00  
+    0:35:37  523247.7      0.00       0.0   25295.1                           7987032576.0000      0.00  
+    0:36:03  523242.6      0.00       0.0   25284.7                           7986893312.0000      0.00  
+    0:36:16  524171.0      0.00       0.0   21118.6 U4/net622960              8021097472.0000      0.00  
+    0:36:28  524669.9      0.00       0.0   19943.7 U4/net554840              8042580480.0000      0.00  
+    0:36:33  524709.5      0.00       0.0   19144.8 U4/net622982              8044691456.0000      0.00  
+    0:36:40  524957.8      0.00       0.0   19124.0 U4/net623585              8052587008.0000      0.00  
+    0:36:46  525057.7      0.00       0.0   18306.8 U4/net521261              8053902336.0000      0.00  
+    0:36:52  525146.9      0.00       0.0   17859.9 U4/net623271              8054548480.0000      0.00  
+    0:36:59  525309.8      0.00       0.0   17784.8                           8058622976.0000      0.00  
+    0:36:59  525309.8      0.00       0.0   17784.8                           8058622976.0000      0.00  
+    0:36:59  525309.8      0.00       0.0   17784.8                           8058622976.0000      0.00  
+    0:36:59  525309.8      0.00       0.0   17784.8                           8058622976.0000      0.00  
+    0:36:59  525309.8      0.00       0.0   17784.8                           8058622976.0000      0.00  
+    0:36:59  525309.8      0.00       0.0   17784.8                           8058622976.0000      0.00  
+    0:37:32  524914.3      0.00       0.0   17777.6                           8008177152.0000      0.00  
+Loading db file '/usr/cadtool/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db'
+Loading db file '/usr/cadtool/SAED32_EDK/lib/io_std/db_nldm/saed32io_wb_ss0p95v125c_2p25v.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'Convnet_top' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'U4/rst_n': 6281 load(s), 1 driver(s), 1 inout(s)
+     Net 'U4/n6275': 6269 load(s), 1 driver(s)
+     Net 'U4/clk_gate_cnt_addr_idx_reg/net176088': 2088 load(s), 1 driver(s), 1 inout(s)
+  Loading target library 'saed32io_wb_ss0p95v125c_2p25v'
+Information: Building the design 'unshuffle'. (HDL-193)
+Warning: Cannot find the design 'unshuffle' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'unshuffle' in 'Convnet_top'. (LINK-5)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+1
+#compile_ultra -incremental -exact_map -no_autoungroup -no_seq_output_inversion -no_boundary_optimization
+# remove dummy ports
+remove_unconnected_ports [get_cells -hierarchical *]
+Information: Building the design 'unshuffle'. (HDL-193)
+Warning: Cannot find the design 'unshuffle' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'unshuffle' in 'Convnet_top'. (LINK-5)
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+remove_unconnected_ports [get_cells -hierarchical *] -blast_buses
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Removing port 'sram_raddr_a1[5]' from design 'conv_pool'
+Removing port 'sram_raddr_a2[5]' from design 'conv_pool'
+Removing port 'sram_raddr_a3[5]' from design 'conv_pool'
+Removing port 'sram_waddr_b[5]' from design 'conv_pool'
+Removing port 'sram_waddr_b[4]' from design 'conv_pool'
+Removing port 'sram_waddr_b[5]' from design 'write'
+Removing port 'sram_raddr_a0[5]' from design 'addr'
+Removing port 'sram_raddr_a1[5]' from design 'addr'
+Removing port 'sram_raddr_a2[5]' from design 'addr'
+Removing port 'sram_raddr_a2[4]' from design 'addr'
+Removing port 'sram_raddr_a3[5]' from design 'addr'
+Removing port 'sram_raddr_a3[4]' from design 'addr'
+Removing port 'sram_raddr_b0[5]' from design 'addr'
+Removing port 'sram_raddr_b1[5]' from design 'addr'
+Removing port 'sram_raddr_b2[5]' from design 'addr'
+Removing port 'sram_raddr_b2[4]' from design 'addr'
+Removing port 'sram_raddr_b3[5]' from design 'addr'
+Removing port 'sram_raddr_b3[4]' from design 'addr'
+1
+1
+source -echo -verbose 3_report.tcl 
+###-----------------------------Naming Rules----------------------------
+set bus_inference_style {%s[%d]}
+%s[%d]
+set bus_naming_style {%s[%d]}
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -rules verilog -hierarchy
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+define_name_rules name_rule -allowed {a-z A-Z 0-9 _} -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed {a-z A-Z 0-9 _[]} -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+###--------------------------Netlist-related------------------------------------
+write -format ddc     -hierarchy -output ./netlist/${TOPLEVEL}_syn.ddc
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing ddc file './netlist/Convnet_top_syn.ddc'.
+1
+write -format verilog -hierarchy -output ./netlist/${TOPLEVEL}_syn.v
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/home/u107/u107061240/ICLAB/hw5/part3/syn/netlist/Convnet_top_syn.v'.
+1
+write_sdf -version 1.0  -context verilog ./netlist/${TOPLEVEL}_syn.sdf
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/u107/u107061240/ICLAB/hw5/part3/syn/netlist/Convnet_top_syn.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+Warning: Design 'Convnet_top' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Design contains black-box components.  These cells will have no timing information. (WT-7)
+1
+write_sdc ./netlist/${TOPLEVEL}_syn.sdc
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+write_saif -output ./netlist/${TOPLEVEL}_syn.saif 
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Writing backward SAIF information to file './netlist/Convnet_top_syn.saif'. (PWR-458)
+1
+###---------------------------Syntheis result reports----------------------------
+# ===== Timing report =====
+report_timing -delay min -max_paths 4 > ./report/report_hold_${TOPLEVEL}.out
+report_timing -delay max -max_paths 4 > ./report/report_setup_${TOPLEVEL}.out
+report_timing -path full -delay max -max_paths 1 -nworst 1 -significant_digits 4 > ./report/report_time_${TOPLEVEL}.out
+# ===== Area report =====
+report_area -hier  > ./report/report_area_${TOPLEVEL}.out
+# ===== Power report =====
+report_power -hier > ./report/report_power_${TOPLEVEL}.out
+# ===== violations =====
+report_constraint -all_violators > ./report/report_violation_${TOPLEVEL}.out
+exit
+
+Memory usage for this session 991 Mbytes.
+Memory usage for this session including child processes 991 Mbytes.
+CPU usage for this session 2432 seconds ( 0.68 hours ).
+Elapsed time for this session 2470 seconds ( 0.69 hours ).
+
+Thank you...

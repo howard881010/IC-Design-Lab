@@ -1,0 +1,70 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : enigma_part2
+Version: R-2020.09-SP5
+Date   : Thu Oct 28 01:43:42 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95v125c   Library: saed32hvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: encrypt (input port clocked by clk)
+  Endpoint: clk_gate_rotorC_table_reg_4_/latch
+            (positive level-sensitive latch clocked by clk')
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  enigma_part2       35000                 saed32hvt_ss0p95v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  0.9500     0.9500 r
+  encrypt (in)                                          0.0000     0.9500 r
+  U8628/Y (OA21X2_HVT)                                  0.1292     1.0792 r
+  U7313/Y (OR2X2_HVT)                                   0.1101     1.1894 r
+  U9941/Y (INVX2_HVT)                                   0.0705     1.2598 f
+  U9179/Y (INVX2_HVT)                                   0.0645     1.3243 r
+  U8599/Y (NAND3X0_HVT)                                 0.0962     1.4205 f
+  U8594/Y (INVX1_HVT)                                   0.0576     1.4781 r
+  U8367/Y (INVX2_HVT)                                   0.0648     1.5428 f
+  U8364/Y (INVX2_HVT)                                   0.0624     1.6052 r
+  U15492/Y (OA21X1_HVT)                                 0.0949     1.7001 r
+  U8573/Y (INVX0_HVT)                                   0.0354     1.7355 f
+  clk_gate_rotorC_table_reg_4_/EN (SNPS_CLOCK_GATE_HIGH_enigma_part2_mydesign_60)
+                                                        0.0000     1.7355 f
+  clk_gate_rotorC_table_reg_4_/latch/D (LATCHX1_HVT)    0.0000     1.7355 f
+  data arrival time                                                1.7355
+
+  clock clk' (rise edge)                                0.9500     0.9500
+  clock network delay (ideal)                           0.0000     0.9500
+  clk_gate_rotorC_table_reg_4_/latch/CLK (LATCHX1_HVT)
+                                                        0.0000     0.9500 r
+  time borrowed from endpoint                           0.7855     1.7355
+  data required time                                               1.7355
+  --------------------------------------------------------------------------
+  data required time                                               1.7355
+  data arrival time                                               -1.7355
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0000
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk' nominal pulse width                              0.9500   
+  library setup time                                   -0.0804   
+  --------------------------------------------------------------
+  max time borrow                                       0.8696   
+  actual time borrow                                    0.7855   
+  --------------------------------------------------------------
+
+
+1

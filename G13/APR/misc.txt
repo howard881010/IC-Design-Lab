@@ -1,0 +1,1 @@
+core utilization rate 設定0.9，合成timing為10ns<9.1ns(dc time constrain)*1.1，所有標準皆達標。

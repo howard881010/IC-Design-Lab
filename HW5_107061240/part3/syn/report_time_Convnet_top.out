@@ -1,0 +1,105 @@
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Convnet_top
+Version: R-2020.09-SP5
+Date   : Thu Dec  9 20:59:29 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95v125c   Library: saed32hvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: U4/accuout_ch0_3_reg_21__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sram_wdata_b[74]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  conv_pool          540000                saed32hvt_ss0p95v125c
+  Convnet_top        540000                saed32hvt_ss0p95v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  U4/accuout_ch0_3_reg_21__1_/CLK (DFFSSRX1_HVT)        0.0000     0.0000 r
+  U4/accuout_ch0_3_reg_21__1_/Q (DFFSSRX1_HVT)          0.2219     0.2219 f
+  U4/U1990/SO (HADDX1_HVT)                              0.1547     0.3766 r
+  U4/U17657/CO (FADDX1_HVT)                             0.1537     0.5303 r
+  U4/U12506/Y (NAND2X0_HVT)                             0.0887     0.6190 f
+  U4/U12509/Y (NAND3X0_HVT)                             0.0633     0.6824 r
+  U4/U12510/Y (NAND2X0_HVT)                             0.0626     0.7449 f
+  U4/U9644/Y (NAND3X0_HVT)                              0.0642     0.8092 r
+  U4/U16867/CO (FADDX1_HVT)                             0.1395     0.9486 r
+  U4/U16780/CO (FADDX1_HVT)                             0.1420     1.0906 r
+  U4/U16569/CO (FADDX1_HVT)                             0.1420     1.2326 r
+  U4/U16289/CO (FADDX1_HVT)                             0.1420     1.3746 r
+  U4/U15876/CO (FADDX1_HVT)                             0.1420     1.5166 r
+  U4/U16088/CO (FADDX1_HVT)                             0.1420     1.6585 r
+  U4/U15551/CO (FADDX1_HVT)                             0.1420     1.8005 r
+  U4/U15107/CO (FADDX1_HVT)                             0.1420     1.9425 r
+  U4/U15023/CO (FADDX1_HVT)                             0.1420     2.0845 r
+  U4/U15357/CO (FADDX1_HVT)                             0.1420     2.2265 r
+  U4/U14867/CO (FADDX1_HVT)                             0.1420     2.3685 r
+  U4/U14701/CO (FADDX1_HVT)                             0.1535     2.5220 r
+  U4/U12512/Y (NAND2X0_HVT)                             0.0854     2.6074 f
+  U4/U12514/Y (NAND3X0_HVT)                             0.0659     2.6733 r
+  U4/U12515/Y (NAND2X0_HVT)                             0.0632     2.7366 f
+  U4/U12517/Y (NAND3X0_HVT)                             0.0714     2.8080 r
+  U4/U12518/Y (NAND2X0_HVT)                             0.0690     2.8770 f
+  U4/U2309/Y (NAND3X0_HVT)                              0.0643     2.9413 r
+  U4/U12521/CO (FADDX1_HVT)                             0.1379     3.0792 r
+  U4/U2010/Y (XOR3X1_HVT)                               0.2685     3.3477 f
+  U4/U9525/Y (XNOR3X1_HVT)                              0.1164     3.4641 f
+  U4/U253/Y (AND2X2_HVT)                                0.1406     3.6048 f
+  U4/U15358/Y (NAND2X0_HVT)                             0.0736     3.6784 r
+  U4/U15359/Y (NAND4X0_HVT)                             0.1526     3.8310 f
+  U4/U18276/Y (AOI22X1_HVT)                             0.1774     4.0084 r
+  U4/U18280/Y (NAND4X0_HVT)                             0.1547     4.1631 f
+  U4/U18579/S (FADDX1_HVT)                              0.2638     4.4269 r
+  U4/U18591/S (FADDX1_HVT)                              0.2323     4.6592 f
+  U4/U18597/SO (HADDX1_HVT)                             0.1600     4.8193 r
+  U4/U18592/Y (NOR2X0_HVT)                              0.1101     4.9293 f
+  U4/U9704/Y (OAI21X1_HVT)                              0.1510     5.0803 r
+  U4/U18604/Y (AOI21X1_HVT)                             0.1397     5.2200 f
+  U4/U18606/Y (OAI21X1_HVT)                             0.1416     5.3616 r
+  U4/U9585/Y (AO21X1_HVT)                               0.0739     5.4355 r
+  U4/U30057/CO (FADDX1_HVT)                             0.1362     5.5717 r
+  U4/U30062/CO (FADDX1_HVT)                             0.1419     5.7136 r
+  U4/U30069/CO (FADDX1_HVT)                             0.1420     5.8556 r
+  U4/U30076/CO (FADDX1_HVT)                             0.1420     5.9976 r
+  U4/U30006/CO (FADDX1_HVT)                             0.1358     6.1334 r
+  U4/U30007/SO (HADDX1_HVT)                             0.1533     6.2867 f
+  U4/U30008/Y (OR2X1_HVT)                               0.0716     6.3583 f
+  U4/U1983/Y (INVX0_HVT)                                0.0299     6.3882 r
+  U4/U1982/Y (NAND3X0_HVT)                              0.2523     6.6406 f
+  U4/U2021/Y (OA22X1_HVT)                               0.1809     6.8214 f
+  U4/U9721/Y (OAI22X1_HVT)                              0.1357     6.9572 r
+  U4/U3956/Y (AO21X1_HVT)                               0.1221     7.0793 r
+  U4/U30126/Y (AND2X1_HVT)                              0.0784     7.1577 r
+  U4/sram_wdata_b[74] (conv_pool)                       0.0000     7.1577 r
+  U714/Y (MUX21X1_HVT)                                  0.1056     7.2633 r
+  sram_wdata_b[74] (out)                                0.0000     7.2633 r
+  data arrival time                                                7.2633
+
+  clock clk (rise edge)                                15.0000    15.0000
+  clock network delay (ideal)                           0.0000    15.0000
+  output external delay                                -7.5000     7.5000
+  data required time                                               7.5000
+  --------------------------------------------------------------------------
+  data required time                                               7.5000
+  data arrival time                                               -7.2633
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.2367
+
+
+1

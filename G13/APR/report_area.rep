@@ -1,0 +1,247 @@
+ 
+****************************************
+Report : area
+Design : CHIP
+Version: R-2020.09-SP5
+Date   : Tue Jan 18 02:35:10 2022
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_ss0p95v125c (File: /usr/cadtool/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db)
+
+Number of ports:                          201
+Number of nets:                           242
+Number of cells:                           42
+Number of combinational cells:             41
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                         41
+Number of references:                       5
+
+Combinational area:              39102.596079
+Buf/Inv area:                     6382.318348
+Noncombinational area:           13908.538413
+Macro/Black Box area:                0.000000
+Net Interconnect area:           23731.724822
+
+Total cell area:                 53011.134492
+Total area:                      76742.859314
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------------------------------------
+CHIP                              53011.1345    100.0    136.9836      0.0000  0.0000  CHIP
+U0                                52874.1509     99.7   2266.9645     44.2211  0.0000  top_pipe
+U0/U0                              2818.2028      5.3   2235.7048    493.8018  0.0000  add_v2_mydesign_2
+U0/U0/clk_gate_carry_reg              9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_29
+U0/U0/clk_gate_result_reg             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_28
+U0/U0/clk_gate_result_reg_0           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_27
+U0/U0/clk_gate_result_reg_1           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_26
+U0/U0/clk_gate_result_reg_2           8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_25
+U0/U0/clk_gate_result_reg_3           8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_24
+U0/U0/clk_gate_result_reg_4           8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_23
+U0/U0/clk_gate_result_reg_5           8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_22
+U0/U0/clk_gate_result_reg_6           9.4033      0.0      3.8122      5.5912  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_21
+U0/U0/clk_gate_result_reg_7           8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_20
+U0/U1                              7587.9774     14.3   6512.1859    959.1394  0.0000  comp_mydesign_2
+U0/U1/clk_gate_exp_same_reg           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_38
+U0/U1/clk_gate_op1_reg                8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_37
+U0/U1/clk_gate_op1_reg_0              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_36
+U0/U1/clk_gate_op1_reg_1              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_35
+U0/U1/clk_gate_op1_reg_2              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_34
+U0/U1/clk_gate_op1_reg_3              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_33
+U0/U1/clk_gate_op1_reg_4              9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_32
+U0/U1/clk_gate_op2_reg                8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_31
+U0/U1/clk_gate_op2_reg_0              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_30
+U0/U1/clk_gate_op2_reg_1              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_29
+U0/U1/clk_gate_op2_reg_2              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_28
+U0/U1/clk_gate_op2_reg_3              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_27
+U0/U1/clk_gate_op2_reg_4              9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_26
+U0/U11                             2727.9817      5.1   2145.7378    494.3101  0.0000  add_v2_mydesign_1
+U0/U11/clk_gate_carry_reg             8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_19
+U0/U11/clk_gate_result_reg            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_18
+U0/U11/clk_gate_result_reg_0          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_17
+U0/U11/clk_gate_result_reg_1          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_16
+U0/U11/clk_gate_result_reg_2          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_15
+U0/U11/clk_gate_result_reg_3          8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_14
+U0/U11/clk_gate_result_reg_4          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_13
+U0/U11/clk_gate_result_reg_5          8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_12
+U0/U11/clk_gate_result_reg_6          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_11
+U0/U11/clk_gate_result_reg_7          8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_10
+U0/U12                             2763.3077      5.2   2178.5224    494.3101  0.0000  add_v2_mydesign_0
+U0/U12/clk_gate_carry_reg            10.6740      0.0      5.5912      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_0
+U0/U12/clk_gate_result_reg            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_9
+U0/U12/clk_gate_result_reg_0          9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_8
+U0/U12/clk_gate_result_reg_1          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_7
+U0/U12/clk_gate_result_reg_2          8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_6
+U0/U12/clk_gate_result_reg_3          8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_5
+U0/U12/clk_gate_result_reg_4          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_4
+U0/U12/clk_gate_result_reg_5          8.6409      0.0      3.5580      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_3
+U0/U12/clk_gate_result_reg_6          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_2
+U0/U12/clk_gate_result_reg_7          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_add_v2_mydesign_0_mydesign_1
+U0/U13                             6852.9930     12.9   5778.2180    958.1229  0.0000  comp_mydesign_1
+U0/U13/clk_gate_exp_same_reg          8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_25
+U0/U13/clk_gate_op1_reg               9.4033      0.0      3.8122      5.5912  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_24
+U0/U13/clk_gate_op1_reg_0             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_23
+U0/U13/clk_gate_op1_reg_1             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_22
+U0/U13/clk_gate_op1_reg_2             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_21
+U0/U13/clk_gate_op1_reg_3             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_20
+U0/U13/clk_gate_op1_reg_4             9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_19
+U0/U13/clk_gate_op2_reg               8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_18
+U0/U13/clk_gate_op2_reg_0             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_17
+U0/U13/clk_gate_op2_reg_1             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_16
+U0/U13/clk_gate_op2_reg_2             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_15
+U0/U13/clk_gate_op2_reg_3             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_14
+U0/U13/clk_gate_op2_reg_4             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_13
+U0/U14                             6895.9433     13.0   5816.5938    958.6311  0.0000  comp_mydesign_0
+U0/U14/clk_gate_exp_same_reg         10.9282      0.0      5.8453      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_0
+U0/U14/clk_gate_op1_reg               9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_12
+U0/U14/clk_gate_op1_reg_0             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_11
+U0/U14/clk_gate_op1_reg_1             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_10
+U0/U14/clk_gate_op1_reg_2             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_9
+U0/U14/clk_gate_op1_reg_3             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_8
+U0/U14/clk_gate_op1_reg_4             9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_7
+U0/U14/clk_gate_op2_reg               8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_6
+U0/U14/clk_gate_op2_reg_0             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_5
+U0/U14/clk_gate_op2_reg_1             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_4
+U0/U14/clk_gate_op2_reg_2             9.9116      0.0      4.3204      5.5912  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_3
+U0/U14/clk_gate_op2_reg_3             9.9116      0.0      4.3204      5.5912  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_2
+U0/U14/clk_gate_op2_reg_4             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_comp_mydesign_0_mydesign_1
+U0/U2                              8691.2165     16.4   3834.5247   4305.1993  0.0000  cordic
+U0/U2/clk_gate_X_1_reg                8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_7
+U0/U2/clk_gate_X_1_reg_0              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_6
+U0/U2/clk_gate_X_1_reg_1              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_5
+U0/U2/clk_gate_X_1_reg_2              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_4
+U0/U2/clk_gate_X_1_reg_3              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_3
+U0/U2/clk_gate_X_1_reg_4              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_2
+U0/U2/clk_gate_X_1_reg_5              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_1
+U0/U2/clk_gate_X_2_reg                8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_14
+U0/U2/clk_gate_X_2_reg_0              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_13
+U0/U2/clk_gate_X_2_reg_1              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_12
+U0/U2/clk_gate_X_2_reg_2              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_11
+U0/U2/clk_gate_X_2_reg_3              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_10
+U0/U2/clk_gate_X_2_reg_4              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_9
+U0/U2/clk_gate_X_2_reg_5              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_8
+U0/U2/clk_gate_X_tmp_reg             11.9448      0.0      6.8619      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_53
+U0/U2/clk_gate_X_tmp_reg_0           11.4365      0.0      6.3536      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_52
+U0/U2/clk_gate_X_tmp_reg_1            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_51
+U0/U2/clk_gate_X_tmp_reg_2            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_50
+U0/U2/clk_gate_X_tmp_reg_3           10.9282      0.0      5.8453      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_49
+U0/U2/clk_gate_X_tmp_reg_4            9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_48
+U0/U2/clk_gate_Y_1_reg                8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_20
+U0/U2/clk_gate_Y_1_reg_0              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_19
+U0/U2/clk_gate_Y_1_reg_1              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_18
+U0/U2/clk_gate_Y_1_reg_2              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_17
+U0/U2/clk_gate_Y_1_reg_3              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_16
+U0/U2/clk_gate_Y_1_reg_4              9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_15
+U0/U2/clk_gate_Y_2_reg                8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_27
+U0/U2/clk_gate_Y_2_reg_0              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_26
+U0/U2/clk_gate_Y_2_reg_1              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_25
+U0/U2/clk_gate_Y_2_reg_2              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_24
+U0/U2/clk_gate_Y_2_reg_3              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_23
+U0/U2/clk_gate_Y_2_reg_4              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_22
+U0/U2/clk_gate_Y_2_reg_5              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_21
+U0/U2/clk_gate_Y_tmp_reg              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_47
+U0/U2/clk_gate_Y_tmp_reg_0            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_46
+U0/U2/clk_gate_Y_tmp_reg_1           11.4365      0.0      6.3536      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_45
+U0/U2/clk_gate_Y_tmp_reg_2            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_44
+U0/U2/clk_gate_Y_tmp_reg_3            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_43
+U0/U2/clk_gate_Y_tmp_reg_4            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_42
+U0/U2/clk_gate_Y_tmp_reg_5           12.4531      0.0      6.8619      5.5912  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_41
+U0/U2/clk_gate_Z_1_reg                8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_33
+U0/U2/clk_gate_Z_1_reg_0              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_32
+U0/U2/clk_gate_Z_1_reg_1              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_31
+U0/U2/clk_gate_Z_1_reg_2              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_30
+U0/U2/clk_gate_Z_1_reg_3              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_29
+U0/U2/clk_gate_Z_1_reg_4              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_28
+U0/U2/clk_gate_Z_2_reg                8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_40
+U0/U2/clk_gate_Z_2_reg_0              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_39
+U0/U2/clk_gate_Z_2_reg_1              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_38
+U0/U2/clk_gate_Z_2_reg_2              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_37
+U0/U2/clk_gate_Z_2_reg_3              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_36
+U0/U2/clk_gate_Z_2_reg_4              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_35
+U0/U2/clk_gate_Z_2_reg_5              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_34
+U0/U2/clk_gate_Z_tmp_reg              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_0
+U0/U2/clk_gate_Z_tmp_reg_0            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_59
+U0/U2/clk_gate_Z_tmp_reg_1            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_58
+U0/U2/clk_gate_Z_tmp_reg_2            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_57
+U0/U2/clk_gate_Z_tmp_reg_3            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_56
+U0/U2/clk_gate_Z_tmp_reg_4            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_55
+U0/U2/clk_gate_Z_tmp_reg_5           11.9448      0.0      6.8619      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_mydesign_54
+U0/U22                              848.3327      1.6    263.0390    566.4870  0.0000  value_correct
+U0/U22/clk_gate_exponent_reg          9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_value_correct_mydesign_2
+U0/U22/clk_gate_exponent_reg_0        9.4033      0.0      4.3204      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_value_correct_mydesign_1
+U0/U3                              6642.0534     12.5   1459.8031      0.0000  0.0000  div
+U0/U3/U0                           5182.2503      9.8   2827.0978   2088.3012  0.0000  div_mantissa_DATAWIDTH57
+U0/U3/U0/clk_gate_CNT_reg             8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_30
+U0/U3/U0/clk_gate_CNT_reg_0           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_29
+U0/U3/U0/clk_gate_CNT_reg_1           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_28
+U0/U3/U0/clk_gate_CNT_reg_2           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_27
+U0/U3/U0/clk_gate_CNT_reg_3           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_26
+U0/U3/U0/clk_gate_CNT_reg_4           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_25
+U0/U3/U0/clk_gate_dividend_e_reg      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_12
+U0/U3/U0/clk_gate_dividend_e_reg_0
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_11
+U0/U3/U0/clk_gate_dividend_e_reg_1
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_10
+U0/U3/U0/clk_gate_dividend_e_reg_10
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_1
+U0/U3/U0/clk_gate_dividend_e_reg_2
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_9
+U0/U3/U0/clk_gate_dividend_e_reg_3
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_8
+U0/U3/U0/clk_gate_dividend_e_reg_4
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_7
+U0/U3/U0/clk_gate_dividend_e_reg_5
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_6
+U0/U3/U0/clk_gate_dividend_e_reg_6
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_5
+U0/U3/U0/clk_gate_dividend_e_reg_7
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_4
+U0/U3/U0/clk_gate_dividend_e_reg_8
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_3
+U0/U3/U0/clk_gate_dividend_e_reg_9
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_2
+U0/U3/U0/clk_gate_divisor_e_reg_10
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_13
+U0/U3/U0/clk_gate_divisor_e_reg_5     8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_18
+U0/U3/U0/clk_gate_divisor_e_reg_6     8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_17
+U0/U3/U0/clk_gate_divisor_e_reg_7     8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_16
+U0/U3/U0/clk_gate_divisor_e_reg_8     8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_15
+U0/U3/U0/clk_gate_divisor_e_reg_9     8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_14
+U0/U3/U0/clk_gate_quotient_e_reg      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_0
+U0/U3/U0/clk_gate_quotient_e_reg_0
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_35
+U0/U3/U0/clk_gate_quotient_e_reg_1
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_34
+U0/U3/U0/clk_gate_quotient_e_reg_2
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_33
+U0/U3/U0/clk_gate_quotient_e_reg_3
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_32
+U0/U3/U0/clk_gate_quotient_e_reg_4
+                                      8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_div_mantissa_DATAWIDTH57_mydesign_31
+U0/U4                              4734.9569      8.9   1578.7426      0.0000  0.0000  mul
+U0/U4/U0                           3156.2143      6.0   1381.5268   1659.0520  0.0000  mul_mantissa
+U0/U4/U0/clk_gate_P_CNT_reg           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_0
+U0/U4/U0/clk_gate_rp_reg              8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_12
+U0/U4/U0/clk_gate_rp_reg_0            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_11
+U0/U4/U0/clk_gate_rp_reg_1            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_10
+U0/U4/U0/clk_gate_rp_reg_10           8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_1
+U0/U4/U0/clk_gate_rp_reg_2            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_9
+U0/U4/U0/clk_gate_rp_reg_3            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_8
+U0/U4/U0/clk_gate_rp_reg_4            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_7
+U0/U4/U0/clk_gate_rp_reg_5            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_6
+U0/U4/U0/clk_gate_rp_reg_6            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_5
+U0/U4/U0/clk_gate_rp_reg_7            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_4
+U0/U4/U0/clk_gate_rp_reg_8            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_3
+U0/U4/U0/clk_gate_rp_reg_9            8.8950      0.0      3.8122      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_mul_mantissa_mydesign_2
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------------------------------------
+Total                                                  39102.5961  13908.5384  0.0000
+
+1

@@ -1,0 +1,1052 @@
+Warning: Design 'Convnet_top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : Convnet_top
+Version: R-2020.09-SP5
+Date   : Thu Dec  9 20:59:29 2021
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_ss0p95v125c (File: /usr/cadtool/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db)
+
+Number of ports:                         7577
+Number of nets:                        210010
+Number of cells:                       159046
+Number of combinational cells:         150343
+Number of sequential cells:              7945
+Number of macros/black boxes:               0
+Number of buf/inv:                      15299
+Number of references:                      23
+
+Combinational area:             467983.805834
+Buf/Inv area:                    21568.438948
+Noncombinational area:           56930.542194
+Macro/Black Box area:                0.000000
+Net Interconnect area:          616041.064341
+
+Total cell area:                524914.348027
+Total area:                    1140955.412369
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-   Black-
+                                  Total        Total    national     national    boxes   Design
+--------------------------------  -----------  -------  -----------  ----------  ------  -------------------------------------------
+Convnet_top                       524914.3480    100.0    1385.5931     36.8509  0.0000  Convnet_top
+U1                                   675.2606      0.1     421.6249    228.4755  0.0000  addr
+U1/clk_gate_CNT_BIAS_reg               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_addr_mydesign_2
+U1/clk_gate_CNT_WE_reg                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_addr_mydesign_1
+U1/clk_gate_CNT_reg                    8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_addr_mydesign_0
+U2                                105331.5047     20.1   98620.5783   6442.5503  0.0000  conv
+U2/clk_gate_weight_reg_0__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_32
+U2/clk_gate_weight_reg_0__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_31
+U2/clk_gate_weight_reg_0__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_30
+U2/clk_gate_weight_reg_0__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_29
+U2/clk_gate_weight_reg_0__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_28
+U2/clk_gate_weight_reg_0__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_27
+U2/clk_gate_weight_reg_0__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_26
+U2/clk_gate_weight_reg_0__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_25
+U2/clk_gate_weight_reg_1__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_24
+U2/clk_gate_weight_reg_1__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_23
+U2/clk_gate_weight_reg_1__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_22
+U2/clk_gate_weight_reg_1__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_21
+U2/clk_gate_weight_reg_1__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_20
+U2/clk_gate_weight_reg_1__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_19
+U2/clk_gate_weight_reg_1__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_18
+U2/clk_gate_weight_reg_1__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_17
+U2/clk_gate_weight_reg_2__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_16
+U2/clk_gate_weight_reg_2__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_15
+U2/clk_gate_weight_reg_2__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_14
+U2/clk_gate_weight_reg_2__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_13
+U2/clk_gate_weight_reg_2__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_12
+U2/clk_gate_weight_reg_2__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_11
+U2/clk_gate_weight_reg_2__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_10
+U2/clk_gate_weight_reg_2__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_9
+U2/clk_gate_weight_reg_3__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_8
+U2/clk_gate_weight_reg_3__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_7
+U2/clk_gate_weight_reg_3__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_6
+U2/clk_gate_weight_reg_3__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_5
+U2/clk_gate_weight_reg_3__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_4
+U2/clk_gate_weight_reg_3__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_3
+U2/clk_gate_weight_reg_3__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_2
+U2/clk_gate_weight_reg_3__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_mydesign_1
+U3                                   737.0176      0.1     483.3819    228.4755  0.0000  write
+U3/clk_gate_CNT_ADDR_R_reg             8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_write_mydesign_2
+U3/clk_gate_CNT_DELAY_reg              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_write_mydesign_1
+U3/clk_gate_CNT_No_reg                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_write_mydesign_0
+U4                                416748.1211     79.4  364644.2816  46258.2733  0.0000  conv_pool
+U4/clk_gate_accuout_ch0_3_reg_0_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_271
+U4/clk_gate_accuout_ch0_3_reg_0__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_270
+U4/clk_gate_accuout_ch0_3_reg_0__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_269
+U4/clk_gate_accuout_ch0_3_reg_10_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_250
+U4/clk_gate_accuout_ch0_3_reg_10__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_249
+U4/clk_gate_accuout_ch0_3_reg_10__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_248
+U4/clk_gate_accuout_ch0_3_reg_11_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_247
+U4/clk_gate_accuout_ch0_3_reg_11__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_246
+U4/clk_gate_accuout_ch0_3_reg_12_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_245
+U4/clk_gate_accuout_ch0_3_reg_12__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_244
+U4/clk_gate_accuout_ch0_3_reg_13_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_243
+U4/clk_gate_accuout_ch0_3_reg_13__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_242
+U4/clk_gate_accuout_ch0_3_reg_14_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_241
+U4/clk_gate_accuout_ch0_3_reg_14__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_240
+U4/clk_gate_accuout_ch0_3_reg_15_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_239
+U4/clk_gate_accuout_ch0_3_reg_15__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_238
+U4/clk_gate_accuout_ch0_3_reg_16_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_237
+U4/clk_gate_accuout_ch0_3_reg_16__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_236
+U4/clk_gate_accuout_ch0_3_reg_17_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_235
+U4/clk_gate_accuout_ch0_3_reg_17__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_234
+U4/clk_gate_accuout_ch0_3_reg_18_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_233
+U4/clk_gate_accuout_ch0_3_reg_18__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_232
+U4/clk_gate_accuout_ch0_3_reg_19_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_231
+U4/clk_gate_accuout_ch0_3_reg_19__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_230
+U4/clk_gate_accuout_ch0_3_reg_1_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_268
+U4/clk_gate_accuout_ch0_3_reg_1__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_267
+U4/clk_gate_accuout_ch0_3_reg_20_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_229
+U4/clk_gate_accuout_ch0_3_reg_20__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_228
+U4/clk_gate_accuout_ch0_3_reg_20__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_227
+U4/clk_gate_accuout_ch0_3_reg_21_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_226
+U4/clk_gate_accuout_ch0_3_reg_21__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_225
+U4/clk_gate_accuout_ch0_3_reg_22_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_224
+U4/clk_gate_accuout_ch0_3_reg_22__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_223
+U4/clk_gate_accuout_ch0_3_reg_23_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_222
+U4/clk_gate_accuout_ch0_3_reg_23__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_221
+U4/clk_gate_accuout_ch0_3_reg_24_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_220
+U4/clk_gate_accuout_ch0_3_reg_24__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_219
+U4/clk_gate_accuout_ch0_3_reg_25_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_218
+U4/clk_gate_accuout_ch0_3_reg_25__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_217
+U4/clk_gate_accuout_ch0_3_reg_26_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_216
+U4/clk_gate_accuout_ch0_3_reg_26__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_215
+U4/clk_gate_accuout_ch0_3_reg_27_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_214
+U4/clk_gate_accuout_ch0_3_reg_27__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_213
+U4/clk_gate_accuout_ch0_3_reg_28_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_212
+U4/clk_gate_accuout_ch0_3_reg_28__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_211
+U4/clk_gate_accuout_ch0_3_reg_29_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_210
+U4/clk_gate_accuout_ch0_3_reg_29__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_209
+U4/clk_gate_accuout_ch0_3_reg_2_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_266
+U4/clk_gate_accuout_ch0_3_reg_2__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_265
+U4/clk_gate_accuout_ch0_3_reg_30_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_208
+U4/clk_gate_accuout_ch0_3_reg_30__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_207
+U4/clk_gate_accuout_ch0_3_reg_30__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_206
+U4/clk_gate_accuout_ch0_3_reg_31_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_205
+U4/clk_gate_accuout_ch0_3_reg_31__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_204
+U4/clk_gate_accuout_ch0_3_reg_32_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_203
+U4/clk_gate_accuout_ch0_3_reg_32__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_202
+U4/clk_gate_accuout_ch0_3_reg_33_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_201
+U4/clk_gate_accuout_ch0_3_reg_33__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_200
+U4/clk_gate_accuout_ch0_3_reg_34_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_199
+U4/clk_gate_accuout_ch0_3_reg_34__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_198
+U4/clk_gate_accuout_ch0_3_reg_35_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_197
+U4/clk_gate_accuout_ch0_3_reg_35__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_196
+U4/clk_gate_accuout_ch0_3_reg_36_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_195
+U4/clk_gate_accuout_ch0_3_reg_36__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_194
+U4/clk_gate_accuout_ch0_3_reg_37_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_193
+U4/clk_gate_accuout_ch0_3_reg_37__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_192
+U4/clk_gate_accuout_ch0_3_reg_38_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_191
+U4/clk_gate_accuout_ch0_3_reg_38__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_190
+U4/clk_gate_accuout_ch0_3_reg_39_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_189
+U4/clk_gate_accuout_ch0_3_reg_39__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_188
+U4/clk_gate_accuout_ch0_3_reg_3_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_264
+U4/clk_gate_accuout_ch0_3_reg_3__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_263
+U4/clk_gate_accuout_ch0_3_reg_40_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_187
+U4/clk_gate_accuout_ch0_3_reg_40__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_186
+U4/clk_gate_accuout_ch0_3_reg_40__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_185
+U4/clk_gate_accuout_ch0_3_reg_41_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_184
+U4/clk_gate_accuout_ch0_3_reg_41__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_183
+U4/clk_gate_accuout_ch0_3_reg_42_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_182
+U4/clk_gate_accuout_ch0_3_reg_42__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_181
+U4/clk_gate_accuout_ch0_3_reg_43_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_180
+U4/clk_gate_accuout_ch0_3_reg_43__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_179
+U4/clk_gate_accuout_ch0_3_reg_44_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_178
+U4/clk_gate_accuout_ch0_3_reg_44__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_177
+U4/clk_gate_accuout_ch0_3_reg_45_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_176
+U4/clk_gate_accuout_ch0_3_reg_45__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_175
+U4/clk_gate_accuout_ch0_3_reg_46_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_174
+U4/clk_gate_accuout_ch0_3_reg_46__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_173
+U4/clk_gate_accuout_ch0_3_reg_47_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_172
+U4/clk_gate_accuout_ch0_3_reg_47__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_171
+U4/clk_gate_accuout_ch0_3_reg_48_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_170
+U4/clk_gate_accuout_ch0_3_reg_48__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_169
+U4/clk_gate_accuout_ch0_3_reg_49_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_168
+U4/clk_gate_accuout_ch0_3_reg_49__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_167
+U4/clk_gate_accuout_ch0_3_reg_4_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_262
+U4/clk_gate_accuout_ch0_3_reg_4__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_261
+U4/clk_gate_accuout_ch0_3_reg_50_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_166
+U4/clk_gate_accuout_ch0_3_reg_50__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_165
+U4/clk_gate_accuout_ch0_3_reg_50__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_164
+U4/clk_gate_accuout_ch0_3_reg_51_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_163
+U4/clk_gate_accuout_ch0_3_reg_51__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_162
+U4/clk_gate_accuout_ch0_3_reg_52_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_161
+U4/clk_gate_accuout_ch0_3_reg_52__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_160
+U4/clk_gate_accuout_ch0_3_reg_53_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_159
+U4/clk_gate_accuout_ch0_3_reg_53__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_158
+U4/clk_gate_accuout_ch0_3_reg_54_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_157
+U4/clk_gate_accuout_ch0_3_reg_54__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_156
+U4/clk_gate_accuout_ch0_3_reg_55_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_155
+U4/clk_gate_accuout_ch0_3_reg_55__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_154
+U4/clk_gate_accuout_ch0_3_reg_56_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_153
+U4/clk_gate_accuout_ch0_3_reg_56__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_152
+U4/clk_gate_accuout_ch0_3_reg_57_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_151
+U4/clk_gate_accuout_ch0_3_reg_57__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_150
+U4/clk_gate_accuout_ch0_3_reg_58_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_149
+U4/clk_gate_accuout_ch0_3_reg_58__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_148
+U4/clk_gate_accuout_ch0_3_reg_59_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_147
+U4/clk_gate_accuout_ch0_3_reg_59__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_146
+U4/clk_gate_accuout_ch0_3_reg_5_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_260
+U4/clk_gate_accuout_ch0_3_reg_5__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_259
+U4/clk_gate_accuout_ch0_3_reg_60_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_145
+U4/clk_gate_accuout_ch0_3_reg_60__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_144
+U4/clk_gate_accuout_ch0_3_reg_60__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_143
+U4/clk_gate_accuout_ch0_3_reg_61_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_142
+U4/clk_gate_accuout_ch0_3_reg_61__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_141
+U4/clk_gate_accuout_ch0_3_reg_62_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_140
+U4/clk_gate_accuout_ch0_3_reg_62__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_139
+U4/clk_gate_accuout_ch0_3_reg_63_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_138
+U4/clk_gate_accuout_ch0_3_reg_63__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_137
+U4/clk_gate_accuout_ch0_3_reg_6_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_258
+U4/clk_gate_accuout_ch0_3_reg_6__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_257
+U4/clk_gate_accuout_ch0_3_reg_7_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_256
+U4/clk_gate_accuout_ch0_3_reg_7__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_255
+U4/clk_gate_accuout_ch0_3_reg_8_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_254
+U4/clk_gate_accuout_ch0_3_reg_8__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_253
+U4/clk_gate_accuout_ch0_3_reg_9_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_252
+U4/clk_gate_accuout_ch0_3_reg_9__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_251
+U4/clk_gate_accuout_ch4_7_reg_0_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_136
+U4/clk_gate_accuout_ch4_7_reg_0__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_135
+U4/clk_gate_accuout_ch4_7_reg_0__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_134
+U4/clk_gate_accuout_ch4_7_reg_10_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_115
+U4/clk_gate_accuout_ch4_7_reg_10__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_114
+U4/clk_gate_accuout_ch4_7_reg_10__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_113
+U4/clk_gate_accuout_ch4_7_reg_11_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_112
+U4/clk_gate_accuout_ch4_7_reg_11__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_111
+U4/clk_gate_accuout_ch4_7_reg_12_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_110
+U4/clk_gate_accuout_ch4_7_reg_12__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_109
+U4/clk_gate_accuout_ch4_7_reg_13_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_108
+U4/clk_gate_accuout_ch4_7_reg_13__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_107
+U4/clk_gate_accuout_ch4_7_reg_14_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_106
+U4/clk_gate_accuout_ch4_7_reg_14__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_105
+U4/clk_gate_accuout_ch4_7_reg_15_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_104
+U4/clk_gate_accuout_ch4_7_reg_15__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_103
+U4/clk_gate_accuout_ch4_7_reg_16_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_102
+U4/clk_gate_accuout_ch4_7_reg_16__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_101
+U4/clk_gate_accuout_ch4_7_reg_17_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_100
+U4/clk_gate_accuout_ch4_7_reg_17__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_99
+U4/clk_gate_accuout_ch4_7_reg_18_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_98
+U4/clk_gate_accuout_ch4_7_reg_18__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_97
+U4/clk_gate_accuout_ch4_7_reg_19_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_96
+U4/clk_gate_accuout_ch4_7_reg_19__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_95
+U4/clk_gate_accuout_ch4_7_reg_1_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_133
+U4/clk_gate_accuout_ch4_7_reg_1__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_132
+U4/clk_gate_accuout_ch4_7_reg_20_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_94
+U4/clk_gate_accuout_ch4_7_reg_20__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_93
+U4/clk_gate_accuout_ch4_7_reg_20__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_92
+U4/clk_gate_accuout_ch4_7_reg_21_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_91
+U4/clk_gate_accuout_ch4_7_reg_21__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_90
+U4/clk_gate_accuout_ch4_7_reg_22_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_89
+U4/clk_gate_accuout_ch4_7_reg_22__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_88
+U4/clk_gate_accuout_ch4_7_reg_23_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_87
+U4/clk_gate_accuout_ch4_7_reg_23__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_86
+U4/clk_gate_accuout_ch4_7_reg_24_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_85
+U4/clk_gate_accuout_ch4_7_reg_24__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_84
+U4/clk_gate_accuout_ch4_7_reg_25_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_83
+U4/clk_gate_accuout_ch4_7_reg_25__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_82
+U4/clk_gate_accuout_ch4_7_reg_26_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_81
+U4/clk_gate_accuout_ch4_7_reg_26__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_80
+U4/clk_gate_accuout_ch4_7_reg_27_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_79
+U4/clk_gate_accuout_ch4_7_reg_27__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_78
+U4/clk_gate_accuout_ch4_7_reg_28_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_77
+U4/clk_gate_accuout_ch4_7_reg_28__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_76
+U4/clk_gate_accuout_ch4_7_reg_29_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_75
+U4/clk_gate_accuout_ch4_7_reg_29__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_74
+U4/clk_gate_accuout_ch4_7_reg_2_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_131
+U4/clk_gate_accuout_ch4_7_reg_2__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_130
+U4/clk_gate_accuout_ch4_7_reg_30_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_73
+U4/clk_gate_accuout_ch4_7_reg_30__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_72
+U4/clk_gate_accuout_ch4_7_reg_30__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_71
+U4/clk_gate_accuout_ch4_7_reg_31_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_70
+U4/clk_gate_accuout_ch4_7_reg_31__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_69
+U4/clk_gate_accuout_ch4_7_reg_32_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_68
+U4/clk_gate_accuout_ch4_7_reg_32__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_67
+U4/clk_gate_accuout_ch4_7_reg_33_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_66
+U4/clk_gate_accuout_ch4_7_reg_33__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_65
+U4/clk_gate_accuout_ch4_7_reg_34_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_64
+U4/clk_gate_accuout_ch4_7_reg_34__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_63
+U4/clk_gate_accuout_ch4_7_reg_35_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_62
+U4/clk_gate_accuout_ch4_7_reg_35__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_61
+U4/clk_gate_accuout_ch4_7_reg_36_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_60
+U4/clk_gate_accuout_ch4_7_reg_36__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_59
+U4/clk_gate_accuout_ch4_7_reg_37_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_58
+U4/clk_gate_accuout_ch4_7_reg_37__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_57
+U4/clk_gate_accuout_ch4_7_reg_38_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_56
+U4/clk_gate_accuout_ch4_7_reg_38__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_55
+U4/clk_gate_accuout_ch4_7_reg_39_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_54
+U4/clk_gate_accuout_ch4_7_reg_39__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_53
+U4/clk_gate_accuout_ch4_7_reg_3_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_129
+U4/clk_gate_accuout_ch4_7_reg_3__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_128
+U4/clk_gate_accuout_ch4_7_reg_40_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_52
+U4/clk_gate_accuout_ch4_7_reg_40__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_51
+U4/clk_gate_accuout_ch4_7_reg_40__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_50
+U4/clk_gate_accuout_ch4_7_reg_41_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_49
+U4/clk_gate_accuout_ch4_7_reg_41__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_48
+U4/clk_gate_accuout_ch4_7_reg_42_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_47
+U4/clk_gate_accuout_ch4_7_reg_42__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_46
+U4/clk_gate_accuout_ch4_7_reg_43_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_45
+U4/clk_gate_accuout_ch4_7_reg_43__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_44
+U4/clk_gate_accuout_ch4_7_reg_44_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_43
+U4/clk_gate_accuout_ch4_7_reg_44__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_42
+U4/clk_gate_accuout_ch4_7_reg_45_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_41
+U4/clk_gate_accuout_ch4_7_reg_45__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_40
+U4/clk_gate_accuout_ch4_7_reg_46_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_39
+U4/clk_gate_accuout_ch4_7_reg_46__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_38
+U4/clk_gate_accuout_ch4_7_reg_47_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_37
+U4/clk_gate_accuout_ch4_7_reg_47__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_36
+U4/clk_gate_accuout_ch4_7_reg_48_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_35
+U4/clk_gate_accuout_ch4_7_reg_48__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_34
+U4/clk_gate_accuout_ch4_7_reg_49_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_33
+U4/clk_gate_accuout_ch4_7_reg_49__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_32
+U4/clk_gate_accuout_ch4_7_reg_4_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_127
+U4/clk_gate_accuout_ch4_7_reg_4__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_126
+U4/clk_gate_accuout_ch4_7_reg_50_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_31
+U4/clk_gate_accuout_ch4_7_reg_50__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_30
+U4/clk_gate_accuout_ch4_7_reg_50__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_29
+U4/clk_gate_accuout_ch4_7_reg_51_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_28
+U4/clk_gate_accuout_ch4_7_reg_51__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_27
+U4/clk_gate_accuout_ch4_7_reg_52_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_26
+U4/clk_gate_accuout_ch4_7_reg_52__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_25
+U4/clk_gate_accuout_ch4_7_reg_53_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_24
+U4/clk_gate_accuout_ch4_7_reg_53__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_23
+U4/clk_gate_accuout_ch4_7_reg_54_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_22
+U4/clk_gate_accuout_ch4_7_reg_54__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_21
+U4/clk_gate_accuout_ch4_7_reg_55_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_20
+U4/clk_gate_accuout_ch4_7_reg_55__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_19
+U4/clk_gate_accuout_ch4_7_reg_56_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_18
+U4/clk_gate_accuout_ch4_7_reg_56__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_17
+U4/clk_gate_accuout_ch4_7_reg_57_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_16
+U4/clk_gate_accuout_ch4_7_reg_57__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_15
+U4/clk_gate_accuout_ch4_7_reg_58_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_14
+U4/clk_gate_accuout_ch4_7_reg_58__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_13
+U4/clk_gate_accuout_ch4_7_reg_59_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_12
+U4/clk_gate_accuout_ch4_7_reg_59__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_11
+U4/clk_gate_accuout_ch4_7_reg_5_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_125
+U4/clk_gate_accuout_ch4_7_reg_5__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_124
+U4/clk_gate_accuout_ch4_7_reg_60_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_10
+U4/clk_gate_accuout_ch4_7_reg_60__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_9
+U4/clk_gate_accuout_ch4_7_reg_60__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_8
+U4/clk_gate_accuout_ch4_7_reg_61_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_7
+U4/clk_gate_accuout_ch4_7_reg_61__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_6
+U4/clk_gate_accuout_ch4_7_reg_62_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_5
+U4/clk_gate_accuout_ch4_7_reg_62__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_4
+U4/clk_gate_accuout_ch4_7_reg_63_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_3
+U4/clk_gate_accuout_ch4_7_reg_63__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_2
+U4/clk_gate_accuout_ch4_7_reg_6_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_123
+U4/clk_gate_accuout_ch4_7_reg_6__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_122
+U4/clk_gate_accuout_ch4_7_reg_7_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_121
+U4/clk_gate_accuout_ch4_7_reg_7__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_120
+U4/clk_gate_accuout_ch4_7_reg_8_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_119
+U4/clk_gate_accuout_ch4_7_reg_8__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_118
+U4/clk_gate_accuout_ch4_7_reg_9_       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_117
+U4/clk_gate_accuout_ch4_7_reg_9__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_116
+U4/clk_gate_accuout_ch8_11_reg_0_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_505
+U4/clk_gate_accuout_ch8_11_reg_0__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_504
+U4/clk_gate_accuout_ch8_11_reg_0__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_503
+U4/clk_gate_accuout_ch8_11_reg_10_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_484
+U4/clk_gate_accuout_ch8_11_reg_10__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_483
+U4/clk_gate_accuout_ch8_11_reg_10__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_482
+U4/clk_gate_accuout_ch8_11_reg_11_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_481
+U4/clk_gate_accuout_ch8_11_reg_11__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_480
+U4/clk_gate_accuout_ch8_11_reg_12_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_479
+U4/clk_gate_accuout_ch8_11_reg_12__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_478
+U4/clk_gate_accuout_ch8_11_reg_13_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_477
+U4/clk_gate_accuout_ch8_11_reg_13__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_476
+U4/clk_gate_accuout_ch8_11_reg_14_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_475
+U4/clk_gate_accuout_ch8_11_reg_14__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_474
+U4/clk_gate_accuout_ch8_11_reg_15_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_473
+U4/clk_gate_accuout_ch8_11_reg_15__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_472
+U4/clk_gate_accuout_ch8_11_reg_16_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_471
+U4/clk_gate_accuout_ch8_11_reg_16__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_470
+U4/clk_gate_accuout_ch8_11_reg_17_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_469
+U4/clk_gate_accuout_ch8_11_reg_17__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_468
+U4/clk_gate_accuout_ch8_11_reg_18_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_467
+U4/clk_gate_accuout_ch8_11_reg_18__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_466
+U4/clk_gate_accuout_ch8_11_reg_19_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_465
+U4/clk_gate_accuout_ch8_11_reg_19__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_464
+U4/clk_gate_accuout_ch8_11_reg_1_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_502
+U4/clk_gate_accuout_ch8_11_reg_1__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_501
+U4/clk_gate_accuout_ch8_11_reg_20_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_463
+U4/clk_gate_accuout_ch8_11_reg_20__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_462
+U4/clk_gate_accuout_ch8_11_reg_20__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_461
+U4/clk_gate_accuout_ch8_11_reg_21_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_460
+U4/clk_gate_accuout_ch8_11_reg_21__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_459
+U4/clk_gate_accuout_ch8_11_reg_22_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_458
+U4/clk_gate_accuout_ch8_11_reg_22__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_457
+U4/clk_gate_accuout_ch8_11_reg_23_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_456
+U4/clk_gate_accuout_ch8_11_reg_23__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_455
+U4/clk_gate_accuout_ch8_11_reg_24_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_454
+U4/clk_gate_accuout_ch8_11_reg_24__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_453
+U4/clk_gate_accuout_ch8_11_reg_25_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_452
+U4/clk_gate_accuout_ch8_11_reg_25__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_451
+U4/clk_gate_accuout_ch8_11_reg_26_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_450
+U4/clk_gate_accuout_ch8_11_reg_26__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_449
+U4/clk_gate_accuout_ch8_11_reg_27_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_448
+U4/clk_gate_accuout_ch8_11_reg_27__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_447
+U4/clk_gate_accuout_ch8_11_reg_28_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_446
+U4/clk_gate_accuout_ch8_11_reg_28__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_445
+U4/clk_gate_accuout_ch8_11_reg_29_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_444
+U4/clk_gate_accuout_ch8_11_reg_29__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_443
+U4/clk_gate_accuout_ch8_11_reg_2_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_500
+U4/clk_gate_accuout_ch8_11_reg_2__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_499
+U4/clk_gate_accuout_ch8_11_reg_30_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_442
+U4/clk_gate_accuout_ch8_11_reg_30__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_441
+U4/clk_gate_accuout_ch8_11_reg_30__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_440
+U4/clk_gate_accuout_ch8_11_reg_31_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_439
+U4/clk_gate_accuout_ch8_11_reg_31__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_438
+U4/clk_gate_accuout_ch8_11_reg_32_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_437
+U4/clk_gate_accuout_ch8_11_reg_32__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_436
+U4/clk_gate_accuout_ch8_11_reg_33_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_435
+U4/clk_gate_accuout_ch8_11_reg_33__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_434
+U4/clk_gate_accuout_ch8_11_reg_34_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_433
+U4/clk_gate_accuout_ch8_11_reg_34__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_432
+U4/clk_gate_accuout_ch8_11_reg_35_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_431
+U4/clk_gate_accuout_ch8_11_reg_35__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_430
+U4/clk_gate_accuout_ch8_11_reg_36_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_429
+U4/clk_gate_accuout_ch8_11_reg_36__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_428
+U4/clk_gate_accuout_ch8_11_reg_37_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_427
+U4/clk_gate_accuout_ch8_11_reg_37__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_426
+U4/clk_gate_accuout_ch8_11_reg_38_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_425
+U4/clk_gate_accuout_ch8_11_reg_38__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_424
+U4/clk_gate_accuout_ch8_11_reg_39_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_423
+U4/clk_gate_accuout_ch8_11_reg_39__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_422
+U4/clk_gate_accuout_ch8_11_reg_3_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_498
+U4/clk_gate_accuout_ch8_11_reg_3__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_497
+U4/clk_gate_accuout_ch8_11_reg_40_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_421
+U4/clk_gate_accuout_ch8_11_reg_40__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_420
+U4/clk_gate_accuout_ch8_11_reg_40__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_419
+U4/clk_gate_accuout_ch8_11_reg_41_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_418
+U4/clk_gate_accuout_ch8_11_reg_41__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_417
+U4/clk_gate_accuout_ch8_11_reg_42_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_416
+U4/clk_gate_accuout_ch8_11_reg_42__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_415
+U4/clk_gate_accuout_ch8_11_reg_43_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_414
+U4/clk_gate_accuout_ch8_11_reg_43__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_413
+U4/clk_gate_accuout_ch8_11_reg_44_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_412
+U4/clk_gate_accuout_ch8_11_reg_44__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_411
+U4/clk_gate_accuout_ch8_11_reg_45_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_410
+U4/clk_gate_accuout_ch8_11_reg_45__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_409
+U4/clk_gate_accuout_ch8_11_reg_46_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_408
+U4/clk_gate_accuout_ch8_11_reg_46__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_407
+U4/clk_gate_accuout_ch8_11_reg_47_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_406
+U4/clk_gate_accuout_ch8_11_reg_47__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_405
+U4/clk_gate_accuout_ch8_11_reg_48_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_404
+U4/clk_gate_accuout_ch8_11_reg_48__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_403
+U4/clk_gate_accuout_ch8_11_reg_49_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_402
+U4/clk_gate_accuout_ch8_11_reg_49__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_401
+U4/clk_gate_accuout_ch8_11_reg_4_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_496
+U4/clk_gate_accuout_ch8_11_reg_4__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_495
+U4/clk_gate_accuout_ch8_11_reg_50_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_400
+U4/clk_gate_accuout_ch8_11_reg_50__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_399
+U4/clk_gate_accuout_ch8_11_reg_50__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_398
+U4/clk_gate_accuout_ch8_11_reg_51_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_397
+U4/clk_gate_accuout_ch8_11_reg_51__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_396
+U4/clk_gate_accuout_ch8_11_reg_52_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_395
+U4/clk_gate_accuout_ch8_11_reg_52__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_394
+U4/clk_gate_accuout_ch8_11_reg_53_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_393
+U4/clk_gate_accuout_ch8_11_reg_53__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_392
+U4/clk_gate_accuout_ch8_11_reg_54_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_391
+U4/clk_gate_accuout_ch8_11_reg_54__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_390
+U4/clk_gate_accuout_ch8_11_reg_55_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_389
+U4/clk_gate_accuout_ch8_11_reg_55__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_388
+U4/clk_gate_accuout_ch8_11_reg_56_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_387
+U4/clk_gate_accuout_ch8_11_reg_56__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_386
+U4/clk_gate_accuout_ch8_11_reg_57_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_385
+U4/clk_gate_accuout_ch8_11_reg_57__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_384
+U4/clk_gate_accuout_ch8_11_reg_58_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_383
+U4/clk_gate_accuout_ch8_11_reg_58__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_382
+U4/clk_gate_accuout_ch8_11_reg_59_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_381
+U4/clk_gate_accuout_ch8_11_reg_59__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_380
+U4/clk_gate_accuout_ch8_11_reg_5_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_494
+U4/clk_gate_accuout_ch8_11_reg_5__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_493
+U4/clk_gate_accuout_ch8_11_reg_60_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_379
+U4/clk_gate_accuout_ch8_11_reg_60__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_378
+U4/clk_gate_accuout_ch8_11_reg_60__1
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_377
+U4/clk_gate_accuout_ch8_11_reg_61_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_376
+U4/clk_gate_accuout_ch8_11_reg_61__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_375
+U4/clk_gate_accuout_ch8_11_reg_62_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_374
+U4/clk_gate_accuout_ch8_11_reg_62__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_373
+U4/clk_gate_accuout_ch8_11_reg_63_
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_372
+U4/clk_gate_accuout_ch8_11_reg_63__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_371
+U4/clk_gate_accuout_ch8_11_reg_6_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_492
+U4/clk_gate_accuout_ch8_11_reg_6__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_491
+U4/clk_gate_accuout_ch8_11_reg_7_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_490
+U4/clk_gate_accuout_ch8_11_reg_7__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_489
+U4/clk_gate_accuout_ch8_11_reg_8_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_488
+U4/clk_gate_accuout_ch8_11_reg_8__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_487
+U4/clk_gate_accuout_ch8_11_reg_9_      8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_486
+U4/clk_gate_accuout_ch8_11_reg_9__0
+                                       8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_485
+U4/clk_gate_bias_reg                   8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_368
+U4/clk_gate_cnt_addr_idx_reg           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_1
+U4/clk_gate_cnt_no_reg                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_370
+U4/clk_gate_cnt_table_reg              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_369
+U4/clk_gate_tmp_reg_0_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_0
+U4/clk_gate_tmp_reg_0__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_696
+U4/clk_gate_tmp_reg_0__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_695
+U4/clk_gate_tmp_reg_10_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_667
+U4/clk_gate_tmp_reg_10__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_666
+U4/clk_gate_tmp_reg_10__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_665
+U4/clk_gate_tmp_reg_11_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_664
+U4/clk_gate_tmp_reg_11__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_663
+U4/clk_gate_tmp_reg_11__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_662
+U4/clk_gate_tmp_reg_12_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_661
+U4/clk_gate_tmp_reg_12__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_660
+U4/clk_gate_tmp_reg_12__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_659
+U4/clk_gate_tmp_reg_13_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_658
+U4/clk_gate_tmp_reg_13__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_657
+U4/clk_gate_tmp_reg_13__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_656
+U4/clk_gate_tmp_reg_14_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_655
+U4/clk_gate_tmp_reg_14__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_654
+U4/clk_gate_tmp_reg_14__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_653
+U4/clk_gate_tmp_reg_15_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_652
+U4/clk_gate_tmp_reg_15__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_651
+U4/clk_gate_tmp_reg_15__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_650
+U4/clk_gate_tmp_reg_16_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_649
+U4/clk_gate_tmp_reg_16__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_648
+U4/clk_gate_tmp_reg_16__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_647
+U4/clk_gate_tmp_reg_17_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_646
+U4/clk_gate_tmp_reg_17__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_645
+U4/clk_gate_tmp_reg_17__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_644
+U4/clk_gate_tmp_reg_18_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_643
+U4/clk_gate_tmp_reg_18__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_642
+U4/clk_gate_tmp_reg_18__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_641
+U4/clk_gate_tmp_reg_19_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_640
+U4/clk_gate_tmp_reg_19__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_639
+U4/clk_gate_tmp_reg_19__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_638
+U4/clk_gate_tmp_reg_1_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_694
+U4/clk_gate_tmp_reg_1__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_693
+U4/clk_gate_tmp_reg_1__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_692
+U4/clk_gate_tmp_reg_20_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_637
+U4/clk_gate_tmp_reg_20__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_636
+U4/clk_gate_tmp_reg_20__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_635
+U4/clk_gate_tmp_reg_21_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_634
+U4/clk_gate_tmp_reg_21__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_633
+U4/clk_gate_tmp_reg_21__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_632
+U4/clk_gate_tmp_reg_22_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_631
+U4/clk_gate_tmp_reg_22__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_630
+U4/clk_gate_tmp_reg_22__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_629
+U4/clk_gate_tmp_reg_23_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_628
+U4/clk_gate_tmp_reg_23__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_627
+U4/clk_gate_tmp_reg_23__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_626
+U4/clk_gate_tmp_reg_24_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_625
+U4/clk_gate_tmp_reg_24__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_624
+U4/clk_gate_tmp_reg_24__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_623
+U4/clk_gate_tmp_reg_25_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_622
+U4/clk_gate_tmp_reg_25__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_621
+U4/clk_gate_tmp_reg_25__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_620
+U4/clk_gate_tmp_reg_26_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_619
+U4/clk_gate_tmp_reg_26__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_618
+U4/clk_gate_tmp_reg_26__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_617
+U4/clk_gate_tmp_reg_27_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_616
+U4/clk_gate_tmp_reg_27__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_615
+U4/clk_gate_tmp_reg_27__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_614
+U4/clk_gate_tmp_reg_28_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_613
+U4/clk_gate_tmp_reg_28__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_612
+U4/clk_gate_tmp_reg_28__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_611
+U4/clk_gate_tmp_reg_29_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_610
+U4/clk_gate_tmp_reg_29__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_609
+U4/clk_gate_tmp_reg_29__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_608
+U4/clk_gate_tmp_reg_2_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_691
+U4/clk_gate_tmp_reg_2__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_690
+U4/clk_gate_tmp_reg_2__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_689
+U4/clk_gate_tmp_reg_30_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_607
+U4/clk_gate_tmp_reg_30__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_606
+U4/clk_gate_tmp_reg_30__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_605
+U4/clk_gate_tmp_reg_31_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_604
+U4/clk_gate_tmp_reg_31__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_603
+U4/clk_gate_tmp_reg_31__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_602
+U4/clk_gate_tmp_reg_32_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_601
+U4/clk_gate_tmp_reg_32__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_600
+U4/clk_gate_tmp_reg_32__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_599
+U4/clk_gate_tmp_reg_33_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_598
+U4/clk_gate_tmp_reg_33__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_597
+U4/clk_gate_tmp_reg_33__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_596
+U4/clk_gate_tmp_reg_34_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_595
+U4/clk_gate_tmp_reg_34__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_594
+U4/clk_gate_tmp_reg_34__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_593
+U4/clk_gate_tmp_reg_35_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_592
+U4/clk_gate_tmp_reg_35__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_591
+U4/clk_gate_tmp_reg_35__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_590
+U4/clk_gate_tmp_reg_36_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_589
+U4/clk_gate_tmp_reg_36__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_588
+U4/clk_gate_tmp_reg_36__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_587
+U4/clk_gate_tmp_reg_37_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_586
+U4/clk_gate_tmp_reg_37__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_585
+U4/clk_gate_tmp_reg_37__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_584
+U4/clk_gate_tmp_reg_38_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_583
+U4/clk_gate_tmp_reg_38__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_582
+U4/clk_gate_tmp_reg_38__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_581
+U4/clk_gate_tmp_reg_39_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_580
+U4/clk_gate_tmp_reg_39__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_579
+U4/clk_gate_tmp_reg_39__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_578
+U4/clk_gate_tmp_reg_3_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_688
+U4/clk_gate_tmp_reg_3__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_687
+U4/clk_gate_tmp_reg_3__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_686
+U4/clk_gate_tmp_reg_40_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_577
+U4/clk_gate_tmp_reg_40__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_576
+U4/clk_gate_tmp_reg_40__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_575
+U4/clk_gate_tmp_reg_41_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_574
+U4/clk_gate_tmp_reg_41__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_573
+U4/clk_gate_tmp_reg_41__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_572
+U4/clk_gate_tmp_reg_42_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_571
+U4/clk_gate_tmp_reg_42__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_570
+U4/clk_gate_tmp_reg_42__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_569
+U4/clk_gate_tmp_reg_43_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_568
+U4/clk_gate_tmp_reg_43__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_567
+U4/clk_gate_tmp_reg_43__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_566
+U4/clk_gate_tmp_reg_44_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_565
+U4/clk_gate_tmp_reg_44__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_564
+U4/clk_gate_tmp_reg_44__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_563
+U4/clk_gate_tmp_reg_45_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_562
+U4/clk_gate_tmp_reg_45__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_561
+U4/clk_gate_tmp_reg_45__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_560
+U4/clk_gate_tmp_reg_46_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_559
+U4/clk_gate_tmp_reg_46__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_558
+U4/clk_gate_tmp_reg_46__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_557
+U4/clk_gate_tmp_reg_47_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_556
+U4/clk_gate_tmp_reg_47__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_555
+U4/clk_gate_tmp_reg_47__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_554
+U4/clk_gate_tmp_reg_48_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_553
+U4/clk_gate_tmp_reg_48__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_552
+U4/clk_gate_tmp_reg_48__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_551
+U4/clk_gate_tmp_reg_49_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_550
+U4/clk_gate_tmp_reg_49__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_549
+U4/clk_gate_tmp_reg_49__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_548
+U4/clk_gate_tmp_reg_4_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_685
+U4/clk_gate_tmp_reg_4__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_684
+U4/clk_gate_tmp_reg_4__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_683
+U4/clk_gate_tmp_reg_50_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_547
+U4/clk_gate_tmp_reg_50__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_546
+U4/clk_gate_tmp_reg_50__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_545
+U4/clk_gate_tmp_reg_51_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_544
+U4/clk_gate_tmp_reg_51__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_543
+U4/clk_gate_tmp_reg_51__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_542
+U4/clk_gate_tmp_reg_52_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_541
+U4/clk_gate_tmp_reg_52__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_540
+U4/clk_gate_tmp_reg_52__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_539
+U4/clk_gate_tmp_reg_53_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_538
+U4/clk_gate_tmp_reg_53__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_537
+U4/clk_gate_tmp_reg_53__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_536
+U4/clk_gate_tmp_reg_54_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_535
+U4/clk_gate_tmp_reg_54__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_534
+U4/clk_gate_tmp_reg_54__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_533
+U4/clk_gate_tmp_reg_55_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_532
+U4/clk_gate_tmp_reg_55__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_531
+U4/clk_gate_tmp_reg_55__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_530
+U4/clk_gate_tmp_reg_56_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_529
+U4/clk_gate_tmp_reg_56__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_528
+U4/clk_gate_tmp_reg_56__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_527
+U4/clk_gate_tmp_reg_57_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_526
+U4/clk_gate_tmp_reg_57__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_525
+U4/clk_gate_tmp_reg_57__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_524
+U4/clk_gate_tmp_reg_58_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_523
+U4/clk_gate_tmp_reg_58__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_522
+U4/clk_gate_tmp_reg_58__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_521
+U4/clk_gate_tmp_reg_59_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_520
+U4/clk_gate_tmp_reg_59__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_519
+U4/clk_gate_tmp_reg_59__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_518
+U4/clk_gate_tmp_reg_5_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_682
+U4/clk_gate_tmp_reg_5__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_681
+U4/clk_gate_tmp_reg_5__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_680
+U4/clk_gate_tmp_reg_60_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_517
+U4/clk_gate_tmp_reg_60__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_516
+U4/clk_gate_tmp_reg_60__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_515
+U4/clk_gate_tmp_reg_61_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_514
+U4/clk_gate_tmp_reg_61__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_513
+U4/clk_gate_tmp_reg_61__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_512
+U4/clk_gate_tmp_reg_62_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_511
+U4/clk_gate_tmp_reg_62__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_510
+U4/clk_gate_tmp_reg_62__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_509
+U4/clk_gate_tmp_reg_63_                8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_508
+U4/clk_gate_tmp_reg_63__0              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_507
+U4/clk_gate_tmp_reg_63__1              8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_506
+U4/clk_gate_tmp_reg_6_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_679
+U4/clk_gate_tmp_reg_6__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_678
+U4/clk_gate_tmp_reg_6__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_677
+U4/clk_gate_tmp_reg_7_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_676
+U4/clk_gate_tmp_reg_7__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_675
+U4/clk_gate_tmp_reg_7__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_674
+U4/clk_gate_tmp_reg_8_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_673
+U4/clk_gate_tmp_reg_8__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_672
+U4/clk_gate_tmp_reg_8__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_671
+U4/clk_gate_tmp_reg_9_                 8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_670
+U4/clk_gate_tmp_reg_9__0               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_669
+U4/clk_gate_tmp_reg_9__1               8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_668
+U4/clk_gate_weight_reg_0__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_367
+U4/clk_gate_weight_reg_0__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_366
+U4/clk_gate_weight_reg_0__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_365
+U4/clk_gate_weight_reg_0__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_364
+U4/clk_gate_weight_reg_0__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_363
+U4/clk_gate_weight_reg_0__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_362
+U4/clk_gate_weight_reg_0__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_361
+U4/clk_gate_weight_reg_0__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_360
+U4/clk_gate_weight_reg_10__0_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_287
+U4/clk_gate_weight_reg_10__1_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_286
+U4/clk_gate_weight_reg_10__2_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_285
+U4/clk_gate_weight_reg_10__3_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_284
+U4/clk_gate_weight_reg_10__4_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_283
+U4/clk_gate_weight_reg_10__5_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_282
+U4/clk_gate_weight_reg_10__6_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_281
+U4/clk_gate_weight_reg_10__7_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_280
+U4/clk_gate_weight_reg_11__0_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_279
+U4/clk_gate_weight_reg_11__1_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_278
+U4/clk_gate_weight_reg_11__2_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_277
+U4/clk_gate_weight_reg_11__3_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_276
+U4/clk_gate_weight_reg_11__4_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_275
+U4/clk_gate_weight_reg_11__5_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_274
+U4/clk_gate_weight_reg_11__6_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_273
+U4/clk_gate_weight_reg_11__7_          8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_272
+U4/clk_gate_weight_reg_1__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_359
+U4/clk_gate_weight_reg_1__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_358
+U4/clk_gate_weight_reg_1__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_357
+U4/clk_gate_weight_reg_1__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_356
+U4/clk_gate_weight_reg_1__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_355
+U4/clk_gate_weight_reg_1__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_354
+U4/clk_gate_weight_reg_1__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_353
+U4/clk_gate_weight_reg_1__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_352
+U4/clk_gate_weight_reg_2__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_351
+U4/clk_gate_weight_reg_2__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_350
+U4/clk_gate_weight_reg_2__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_349
+U4/clk_gate_weight_reg_2__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_348
+U4/clk_gate_weight_reg_2__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_347
+U4/clk_gate_weight_reg_2__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_346
+U4/clk_gate_weight_reg_2__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_345
+U4/clk_gate_weight_reg_2__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_344
+U4/clk_gate_weight_reg_3__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_343
+U4/clk_gate_weight_reg_3__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_342
+U4/clk_gate_weight_reg_3__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_341
+U4/clk_gate_weight_reg_3__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_340
+U4/clk_gate_weight_reg_3__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_339
+U4/clk_gate_weight_reg_3__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_338
+U4/clk_gate_weight_reg_3__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_337
+U4/clk_gate_weight_reg_3__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_336
+U4/clk_gate_weight_reg_4__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_335
+U4/clk_gate_weight_reg_4__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_334
+U4/clk_gate_weight_reg_4__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_333
+U4/clk_gate_weight_reg_4__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_332
+U4/clk_gate_weight_reg_4__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_331
+U4/clk_gate_weight_reg_4__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_330
+U4/clk_gate_weight_reg_4__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_329
+U4/clk_gate_weight_reg_4__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_328
+U4/clk_gate_weight_reg_5__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_327
+U4/clk_gate_weight_reg_5__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_326
+U4/clk_gate_weight_reg_5__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_325
+U4/clk_gate_weight_reg_5__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_324
+U4/clk_gate_weight_reg_5__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_323
+U4/clk_gate_weight_reg_5__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_322
+U4/clk_gate_weight_reg_5__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_321
+U4/clk_gate_weight_reg_5__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_320
+U4/clk_gate_weight_reg_6__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_319
+U4/clk_gate_weight_reg_6__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_318
+U4/clk_gate_weight_reg_6__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_317
+U4/clk_gate_weight_reg_6__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_316
+U4/clk_gate_weight_reg_6__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_315
+U4/clk_gate_weight_reg_6__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_314
+U4/clk_gate_weight_reg_6__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_313
+U4/clk_gate_weight_reg_6__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_312
+U4/clk_gate_weight_reg_7__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_311
+U4/clk_gate_weight_reg_7__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_310
+U4/clk_gate_weight_reg_7__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_309
+U4/clk_gate_weight_reg_7__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_308
+U4/clk_gate_weight_reg_7__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_307
+U4/clk_gate_weight_reg_7__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_306
+U4/clk_gate_weight_reg_7__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_305
+U4/clk_gate_weight_reg_7__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_304
+U4/clk_gate_weight_reg_8__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_303
+U4/clk_gate_weight_reg_8__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_302
+U4/clk_gate_weight_reg_8__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_301
+U4/clk_gate_weight_reg_8__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_300
+U4/clk_gate_weight_reg_8__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_299
+U4/clk_gate_weight_reg_8__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_298
+U4/clk_gate_weight_reg_8__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_297
+U4/clk_gate_weight_reg_8__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_296
+U4/clk_gate_weight_reg_9__0_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_295
+U4/clk_gate_weight_reg_9__1_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_294
+U4/clk_gate_weight_reg_9__2_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_293
+U4/clk_gate_weight_reg_9__3_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_292
+U4/clk_gate_weight_reg_9__4_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_291
+U4/clk_gate_weight_reg_9__5_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_290
+U4/clk_gate_weight_reg_9__6_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_289
+U4/clk_gate_weight_reg_9__7_           8.3868      0.0       3.3039      5.0829  0.0000  SNPS_CLOCK_GATE_HIGH_conv_pool_mydesign_288
+--------------------------------  -----------  -------  -----------  ----------  ------  -------------------------------------------
+Total                                                   467983.8058  56930.5422  0.0000
+
+1
