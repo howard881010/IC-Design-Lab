@@ -1,0 +1,13 @@
+
+task input_preparation;
+    begin
+        // implement your function here
+    end
+endtask
+
+
+task output_comparison;
+    begin
+        // implement your function here
+    end
+endtask
